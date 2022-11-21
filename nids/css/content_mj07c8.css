@@ -1,0 +1,719 @@
+@charset "utf-8";
+/* *******************************************************
+ * filename : content.css
+ * description : 서브페이지 컨텐츠 CSS
+ * date : 2022-03-14
+******************************************************** */
+
+/************************ Support :: 온라인문의 ************************/
+/* 공통 셀렉트 */
+.cm-search-select-box{}
+.cm-search-select-inner{display:block; position:relative;}
+.cm-search-select-inner .cm-select-trigger{display:block; position:relative; width:100%; text-align:left; height:45px; border-bottom:2px solid #ddd; color:#000; padding-right:30px; font-size:15px; transition: border-bottom-color 0.3s;}
+.cm-search-select-inner .cm-select-trigger em{display:block; position:absolute; bottom:50%; left:0px; width:100%; transform:translateY(50%); white-space:nowrap; overflow:hidden; font-weight: 400; transition:all 0.3s;}
+.cm-search-select-inner .cm-select-trigger em span{color:var(--main-color);}
+.cm-search-select-inner .cm-select-trigger:after{position:absolute; top:50%; right:0px; transform:translateY(-50%); font-family:"xeicon"; font-size:1.4em; content: "\e942";}
+.cm-search-select-inner .cm-select-option-list{position:absolute; top:100%; overflow-x:hidden; overflow-y:auto; max-height:200px; border:2px solid #ddd; border-top:0; left:0; right:0; background-color:#fff; display:none; z-index:11;}
+.cm-search-select-inner .cm-select-option-list li .cm-select-option-item{display:flex; width:100%; height:40px; color:#333; font-size:15px; padding:0 1em; align-items:center; transition:all 0.3s}
+.cm-search-select-inner .cm-select-option-list li .cm-select-option-item:hover{background-color:#ddd;}
+/* atvie */
+.cm-search-select-inner .cm-select-trigger.open{border-bottom-color: #000; cursor: auto;}
+.cm-search-select-inner .cm-select-trigger.selected{cursor: auto;}
+.cm-search-select-inner .cm-select-trigger.open:after{transform:translateY(-50%) rotate(180deg);}
+.cm-search-select-inner .cm-select-trigger.open .button-tit,
+.cm-search-select-inner .cm-select-trigger.selected .button-tit{font-size:15px; transform:translateY(-100%); color:var(--main-color);}
+
+/* 공통 인풋 */
+.cm-search-input-box{}
+.cm-search-input-inner{display:block; position:relative;}
+.cm-search-input-inner .cm-input-con{position: relative; width:100%; height:45px; border-bottom:2px solid #ddd; transition: border-bottom-color 0.3s;}
+.cm-search-input-inner .cm-input-trigger{display:block; position: absolute; top: 0; left: 0; width: 100%; height: 45px; color:#070707; font-size:16px; text-align:left; transition: top 0.3s;}
+.cm-search-input-inner .cm-input-trigger em{display:block;}
+.cm-search-input-inner .cm-input-trigger em span{color:var(--main-color);}
+.cm-search-input-inner .cm-input{position:absolute; top:0; left: 0; width: 100%; height: 100%; z-index: 100; display: none;}
+.cm-search-input-inner .cm-input input{font-size: 15px; color: #000; width: 100%; height: 100%; background-color: transparent; border: 0; -webkit-appearance: none; -moz-appearance: none; appearance: none; -webkit-border-radius: 0;}
+.cm-search-input-inner .cm-input input::-ms-clear { display: none; }
+.cm-search-input-inner .cm-input input:focus{outline: none;}
+.cm-search-input-inner .cm-input input::placeholder{color: var(--main-color);}
+/* atvie */
+.cm-search-input-inner .cm-input-con.open,
+.cm-search-input-inner .cm-input-con.selected{border-bottom-color: var(--main-color);}
+.cm-search-input-inner .cm-input-con.open .cm-input-trigger,
+.cm-search-input-inner .cm-input-con.selected .cm-input-trigger{height: auto; top: -15px; transition: top 0.3s; cursor: auto;}
+.cm-search-input-inner .cm-input-con.selected .cm-input{display: block !important;}
+
+.support-inquiry-wrapper{margin: 20px auto 0; max-width: 600px; width: 100%;}
+.support-inquiry-list{}
+.support-inquiry-item{width: 100%; margin: 0 0 3.7rem;}
+.support-inquiry-item:last-child{margin-bottom:0;}
+.support-inquiry-item.full{width: 96.4%;}
+
+.support-inquiry-agree{margin: 20px auto 0; letter-spacing: -0.15px; color: #000; text-align: center; max-width:600px;}
+.support-inquiry-agree .agree-txt{display: flex; justify-content:space-between; padding:0 2rem; border:1px solid #ddd; border-radius:1.5rem; height:6rem; line-height:6rem;}
+.support-inquiry-agree .agree-txt input{display:none;}
+.support-inquiry-agree .agree-txt label{position:relative; padding-left:30px; font-size: 1.6rem;}
+.support-inquiry-agree .agree-txt label:before{position:absolute; top:0; left:0px; font-size: 2.4rem; color:#222; content: "\e92c"; font-family:xeicon !important;}
+.support-inquiry-agree .agree-txt input:checked + label:before{content: "\e92b";}
+.support-inquiry-agree .agree-txt label a{color: #222;}
+.support-inquiry-agree .agree-txt label a span{margin-right: 5px; text-decoration: underline; display: inline-block; vertical-align: middle;}
+.support-inquiry-agree .agree-txt label a i{font-size: 2.4rem; display: inline-block; vertical-align: middle;}
+.support-inquiry-agree .agree-txt .right-txt{font-size: 1.2rem; display: inline-block; vertical-align: middle; font-weight:700; color:#222;}
+.support-inquiry-agree .agree-txt .right-txt i{font-size: 2rem; vertical-align:middle; margin-left:0.5rem;}
+.support-inquiry-summit-btn{margin-top: 5rem; position: relative; font-size: 1.8rem; font-weight:700; color: #fff; width: 24rem; height: 6rem; background-color: var(--main-color); text-align: center; -webkit-box-sizing: border-box; box-sizing: border-box; border-radius: 6rem;}
+
+/* 공통 텍스트박스 */
+.cm-textarea-con .textarea-tit{color:#000; padding-right:30px; font-size:15px; margin-bottom:1rem; font-weight:400;}
+.cm-textarea-con .cm-textarea textarea{width:100%; height:200px; background:#eee; border-radius:15px; border:none; padding:10px; color:#000; font-size:15px;}
+
+
+/************************ brand :: 소개 ************************/
+/* about :: con01 */
+.about-con-01{margin-top:11rem;}
+.about-con-01 .tit-box{position: relative; margin-bottom:19rem;}
+.about-con-01 .tit-box:before{position: absolute; content:''; top:5.5rem; right:15rem; background:no-repeat center; background-image:url('../images/content/about_tit_bg.png'); background-size:cover; width:25%; height:0; padding-top:25%;}
+.about-con-01 .tit-box .sub-tit{display: block; font-size:2rem; line-height:1.7em; letter-spacing:-0.015em; color:var(--main-color); margin-bottom:2.5rem;}
+.about-con-01 .tit-box .tit{font-size:10rem; line-height:1.1em; letter-spacing:-0.025em; color:#222; font-weight:900;}
+.about-con-01 .about-list-wrap{display: flex; min-width:740px;}
+.about-con-01 .about-list-item{position: relative; width:33.33%; padding-right:5rem; box-sizing:border-box;}
+.about-con-01 .about-list-item:before{position: absolute; font-size:15rem; color:#f5f5f5; font-weight:900; z-index:-1; left:0; top:0; transform:translate(-50%, -50%);}
+.about-con-01 .about-list-item:nth-child(1):before{content:'1';}
+.about-con-01 .about-list-item:nth-child(2):before{content:'2';}
+.about-con-01 .about-list-item:nth-child(3):before{content:'3';}
+
+.about-con-01 .about-list-item .tit{font-size:6rem; line-height:1; letter-spacing:-0.025em; color:#222; font-weight:900; margin-bottom:1.7rem;}
+.about-con-01 .about-list-item .tit span{font-size:2.6rem; line-height:1.54; letter-spacing:-0.025em; color:#222; font-weight:600;}
+.about-con-01 .about-list-item dl dt{font-size:2rem; line-height:1.5; letter-spacing:-0.015em; color:#222; font-weight:600; margin-bottom:1rem;}
+.about-con-01 .about-list-item dl dd{font-size:1.6rem; line-height:1.63; letter-spacing:-0.025em; color:#686868;}
+
+@media all and (min-width:801px){
+	.about-con-01 .mCustomScrollBox,
+	.about-con-01 .mCSB_container{overflow:visible;}
+	.about-con-01 .mCSB_scrollTools .mCSB_draggerContainer{display: none;}
+}
+
+/* about :: con02 */
+.about-con-02{margin-top:12.8rem;}
+.about-con-02 .about-item{position: relative; padding:7.3rem 0; margin-bottom:13.54%;}
+.about-con-02 .about-item:last-child{margin-bottom:0;}
+.about-con-02 .about-item .tit{font-size:8rem; line-height:1.175; letter-spacing:-0.025em; color:#222; font-weight:400; margin-bottom:5.5rem;}
+.about-con-02 .about-item .tit em{color:var(--main-color); font-weight:700;}
+.about-con-02 .about-item .txt{font-size:2.4rem; line-height:1.58; letter-spacing:-0.025em; color:#222;}
+
+.about-con-02 .about-item .img-box{position: absolute; top:50%; transform:translateY(-50%); width:46.875%; height:0; padding-top:31.25%; z-index:-1;}
+.about-con-02 .about-item .img-box img{position: absolute; top:0; right:0; width:100%; height:100%;}
+/* 왼쪽 컨텐츠 */
+.about-con-02 .about-item.left-box .img-box{right:0;}
+.about-con-02 .about-item.left-box .txt{margin-left:7rem;}
+.about-con-02 .about-item.left-box .tit .pc-space{display: inline-block; width:7rem;}
+/* 오른쪽 컨텐츠 */
+.about-con-02 .about-item.right-box .img-box{left:0;}
+.about-con-02 .about-item.right-box .txt-box{margin-left:33.3rem}
+.about-con-02 .about-item.right-box .tit .pc-space{display: inline-block; width:9.2rem;}
+.about-con-02 .about-item.right-box .txt{margin-left:27.3rem}
+.about-con-02 .about-item.right-box .txt .pc-space{margin-left:3rem}
+
+/* about :: con03 */
+.about-con-03{margin-top:26rem;}
+.about-con-03 .tit-box{margin-bottom:4.8rem;}
+.about-con-03 .tit-box .sub-tit{display: block; font-size:5rem; line-height:1.2em; letter-spacing:-0.025em; color:#222; font-weight:900; margin-bottom:3rem;}
+.about-con-03 .tit-box .tit{font-size:8rem; line-height:1.175em; letter-spacing:-0.025em; color:#222; font-weight:400;}
+.about-con-03 .tit-box .tit em{color:var(--main-color); font-weight:700;}
+.about-con-03 .txt-box{display: flex; justify-content:space-between;}
+.about-con-03 .txt-box .txt{width:50%; padding-right:3rem; box-sizing:border-box; font-size:1.8rem; line-height:1.78; letter-spacing:-0.015em; color:#222;}
+.about-con-03 .bottom-banner-box{margin-top:9.1rem;}
+.about-con-03 .bottom-banner-box span{display: block; position: relative; width:100%; height:0; padding-top:54rem; background:no-repeat center; background-image:url('../images/content/about_bottom_banner.jpg'); background-size:cover;}
+
+@media all and (max-width:1280px){
+	/* about :: con02 */
+	.about-con-02 .about-item{margin-bottom:5%;}
+	.about-con-02 .about-item.right-box .txt-box{margin-left:30rem}
+}
+@media all and (max-width:800px){
+	/* about :: con01 */
+	.about-con-01{margin-top:8rem;}
+	.about-con-01 .tit-box{margin-bottom:7rem;}
+	.about-con-01 .tit-box:before{display: none;}
+	.about-con-01 .tit-box .tit{font-size:7rem;}
+
+	.about-con-01 .about-list-wrap{min-width:1200px; margin-left:3rem; padding-top:6rem;}
+	.about-con-01 .mCSB_scrollTools.mCSB_scrollTools_horizontal{margin-right:var(--area-padding);}
+	.about-con-01 .mCSB_scrollTools .mCSB_draggerContainer:before{position: absolute; content:''; width:100%; height:6px; background:#eee; top:50%; left:0; transform:translateY(-50%);}
+	.about-con-01 .mCSB_scrollTools.mCSB_scrollTools_horizontal .mCSB_dragger .mCSB_dragger_bar{height:6px; margin:5px auto; background:var(--main-color) !important; opacity:1 !important; border-radius:0;}
+	/* about :: con02 */
+	.about-con-02{margin-top:8rem;}
+	.about-con-02 .about-item{padding:0;}
+	.about-con-02 .about-item .tit{margin-bottom:1.5rem; font-size:7rem;}
+	.about-con-02 .about-item .txt{font-size:1.8rem;}
+	.about-con-02 .about-item .txt-box{margin-bottom:5rem;}
+	.about-con-02 .about-item .txt-box br{display: none;}
+	.about-con-02 .about-item .img-box{position: relative; top:auto; transform:none; width:calc(100% - (2 * var(--area-padding))); margin:auto; padding-top:66.66%;}
+
+	.about-con-02 .about-item.left-box .txt{margin-left:0;}
+	.about-con-02 .about-item.right-box .txt-box,
+	.about-con-02 .about-item.right-box .txt{margin-left:0;}
+
+	.about-con-02 .about-item .tit .pc-space{display: none !important;}
+	.about-con-02 .about-item .txt .pc-space{margin-left:0 !important;}
+
+	/* about :: con03 */
+	.about-con-03{margin-top:10rem;}
+	.about-con-03 .tit-box .sub-tit{font-size:3rem;}
+	.about-con-03 .tit-box .tit{font-size:6rem;}
+	.about-con-03 .txt-box{flex-wrap:wrap;}
+	.about-con-03 .txt-box .txt{width:100%; margin-bottom:1.5rem;}
+	.about-con-03 .txt-box .txt:last-child{margin-bottom:0;}
+	.about-con-03 .bottom-banner-box{margin-top:5rem;}
+	.about-con-03 .bottom-banner-box span{padding-top:42rem;}
+}
+@media all and (max-width:640px){
+	.about-con-01 .about-list-wrap{min-width:900px;}
+	.about-con-01 .about-list-item{padding-right:2rem;}
+}
+@media all and (max-width:480px){
+	.about-con-02 .about-item .tit .txt-mobile{display: inline-block; width: 100%; text-align: right;}
+}
+
+
+
+
+/*----------------------- 본사 -----------------------*/
+
+/* 페이지 타이틀 */
+.cm-page-tit{font-size:5.8rem; line-height:1.23; letter-spacing:-0.045em; color:#222; text-align:center; margin:11rem 0 5.8rem;}
+/* 사업분야 센서 :: top 컨텐츠 */
+.sensor-top-con{display: flex; align-items: flex-end; position: relative; margin-bottom:20rem; height:96rem;}
+.sensor-top-con .sensor-top-bg{position: absolute; top:0; left:0; width:100%; height:100%; background:no-repeat center; background-image:url('../images/content/sensor_dust_top_bg.jpg'); background-size:cover;}
+.sensor-gas-page .sensor-top-con .sensor-top-bg{background-image:url('../images/content/sensor_gas_top_bg.jpg');}
+.sensor-top-list{display: flex; padding:0rem 6rem; box-sizing:border-box; position: relative;}
+.sensor-top-list .list-item{display: flex; align-items:center; width:33.33%; padding:6.5rem; box-sizing:border-box;}
+.sensor-top-list .list-item:nth-child(1){background:rgba(143,29,42,0.75);}
+.sensor-top-list .list-item:nth-child(2){background:rgba(0,0,0,0.75);}
+.sensor-top-list .list-item:nth-child(3){background:rgba(20,47,42,0.75);}
+.sensor-top-list .list-item .icon-box{width:7rem; text-align:center;}
+.sensor-top-list .list-item .icon-box .tit{display: block; font-size:2.6rem; line-height:1.53; letter-spacing:-0.025em; color:#fff; font-weight:600; margin-top:1.6rem;}
+.sensor-top-list .list-item .txt-box{width:calc(100% - 7rem); padding-left:5rem;}
+.sensor-top-list .list-item .txt-box .txt{font-size:1.6rem; line-height:1.625; letter-spacing:-0.025em; color:rgba(255,255,255,0.7); font-weight:300;}
+.sensor-top-btn{position: relative; transform:translateY(50%);}
+.sensor-top-btn a{display: flex; align-items:center; justify-content:space-between; width:22rem; height:6rem; line-height:6rem; background:var(--main-color); padding:0 3.5rem; box-sizing:border-box; margin:6.6rem auto 0;}
+.sensor-top-btn a i{font-size:2.4rem; line-height:1.25; color:#fff;}
+.sensor-top-btn a span{font-size:1.6rem; line-height:1.875; color:#fff; font-weight:600;}
+
+/* 사업분야 센서 :: 컨텐츠01 */
+.sensor-tit{font-size:3.8rem; line-height:1.5; letter-spacing:-0.025em; color:#000;}
+.sensor-tit span{font-weight:400;}
+.sensor-txt{font-size:2.6rem; line-height:1.53; letter-spacing:-0.025em; color:#222; margin-top:3.3rem}
+.sensor-con-01{margin-bottom:16rem;}
+.sensor-con-01 .tit-box{text-align:center; margin-bottom:7.7rem;}
+.sensor-con-01 .tit-box .sub-tit{display: block; font-size:2.6rem; line-height:1.3; letter-spacing:-0.025em; color:#222; font-weight:400; margin-top:1.6rem;}
+.sensor-con-01 .tit-box .txt{font-size:1.8rem; line-height:1.66; letter-spacing:-0.025em; color:#333; margin-top:3.7rem;}
+
+.sensor-con-01 .sensor-con-list{border-top:2px solid #000; }
+.sensor-con-01 .sensor-con-list .list-item{display: flex; align-items:center; border-bottom:1px solid #ddd; padding:5rem; box-sizing:border-box;}
+.sensor-con-01 .sensor-con-list .list-item .logo-box{width:10.6rem;}
+.sensor-con-01 .sensor-con-list .list-item .logo-box img{max-width:100%;}
+.sensor-con-01 .sensor-con-list .list-item .txt-box{width:calc(100% - 10.6rem); padding-left:5rem; box-sizing:border-box;}
+.sensor-con-01 .sensor-con-list .list-item .txt-box dt{font-size:2rem; line-height:1.15; letter-spacing:-0.025em; color:#222; font-weight:600; margin-bottom:1.8rem;}
+.sensor-con-01 .sensor-con-list .list-item .txt-box dd{font-size:1.8rem; line-height:1.66; letter-spacing:-0.025em; color:#888;}
+
+/* 사업분야 센서 :: 컨텐츠02 */
+.sensor-con-02{margin-bottom:17rem;}
+.sensor-con-02 > .area > .tit-box{text-align:center; margin-bottom:8.4rem;}
+.sensor-con-02-list{display: flex; justify-content:space-between; margin-bottom:15rem;}
+.sensor-con-02-list .list-item{width:47.5%;}
+.sensor-con-02-list .list-item .item-box{box-shadow: 0px 22px 29px 0px rgba(0, 0, 0, 0.11);}
+.sensor-con-02-list .list-item .item-box .img-box{display: block; position: relative; width:100%; height:0; padding-top:57.9%; background:#f4f4f4;}
+.sensor-con-02-list .list-item .item-box .img-box img{position: absolute; top:0; bottom:0; left:0; right:0; margin:auto; max-width:100%; max-height:100%; padding:3.5rem; box-sizing:border-box;}
+.sensor-con-02-list .list-item .item-box .tit-box{text-align:center;	 padding:4rem 1rem; box-sizing:border-box;}
+.sensor-con-02-list .list-item .item-box .tit-box .tit{font-size:2rem; line-height:1.5; color:#000; font-weight:500; margin-bottom:2rem;}
+.sensor-con-02-list .list-item .item-box .tit-box a{font-size:1.5rem; line-height:2rem; color:#000; }
+.sensor-con-02-list .list-item .item-box .tit-box a i{font-size:1rem; color:#fff; width:2.2rem; height:2.2rem; line-height:2.2rem; text-align:center; background:var(--main-color); border-radius:50%; margin-left:1rem;}
+.sensor-con-02-list .list-item .info-box{ margin-top:4rem;}
+.sensor-con-02-list .list-item .info-box .info-txt{position: relative; font-size:1.8rem; line-height:1.66; letter-spacing:-0.025em; color:#888; padding-left:2.8rem; margin-bottom:0.8rem;}
+.sensor-con-02-list .list-item .info-box .info-txt:before{position: absolute; content:'\e928'; font-family:'xeicon'; font-size:1.4rem; color:var(--main-color); top:0.4rem; left:0;}
+.sensor-con-02-list .list-item .info-box .info-txt .info-plus-txt{font-size:1.6rem; line-height:1.875; letter-spacing:-0.01em; color:#383838;}
+.sensor-con-02-list .list-item .info-box .info-txt .info-plus-txt i{font-size:1.9rem; line-height:1.61; vertical-align: middle;}
+/* 컨텐츠02 :: 탭 */
+.sensor-con-02-tab{display: none;}
+/* sensor tab 스타일 */
+.sensor-tab-wrapper-style{position:relative; /* height:6rem; */ margin-bottom:15px; }
+.sensor-tab-list-style ul{display:table; width:100%; height:100%; table-layout:fixed;}
+.sensor-tab-list-style ul:after{display:none}
+.sensor-tab-list-style ul li{/* float:left; */ display:table-cell; vertical-align:middle; position:relative; width:50%; border-bottom:1px solid #d9d9d9; box-sizing:border-box;}
+.sensor-tab-list-style ul li a{position: relative; display:table; height:6rem; width:100%; }
+.sensor-tab-list-style ul li a:before{position: absolute; content:''; width:100%; height:3px; background:#000; bottom:-1px; left:0; opacity:0; transition:all 0.3s;}
+.sensor-tab-list-style ul li a em{display:table-cell; vertical-align:middle; color:rgba(0,0,0,0.25); font-size:2rem; text-align:center; font-weight:600; transition:all 0.3s;}
+.sensor-tab-list-style ul li.selected{z-index:1; }
+.sensor-tab-list-style ul li.selected a:before,
+.sensor-tab-list-style ul li a:hover:before{opacity:1;}
+.sensor-tab-list-style ul li.selected a em,
+.sensor-tab-list-style ul li a:hover em{color:#000; }
+/* tab 컨텐츠 */
+.sensor-tab-inner .item-list{display: flex; justify-content:space-between; width:100%; margin-top:11.3rem;}
+.sensor-tab-inner .item-list .list-item{width:25%; margin:0 4rem; text-align:center; margin-bottom:8.5rem;}
+.sensor-tab-inner .item-list.list-02{justify-content: flex-start;}
+.sensor-tab-inner .item-list.list-02 .list-item{width:calc(25% - 8rem);}
+.sensor-circle-item{position: relative; width:100%; height:0; padding-top:100%; border-radius:50%; background:#fff; box-shadow: 0px 14px 40px 0px rgba(0, 0, 0, 0.56); margin-bottom:4rem}
+.sensor-circle-item:before{position: absolute; content:''; top:-1.7rem; left:-1.7rem; width:calc(100% + 3.5rem); height:calc(100% + 3.4rem); background:no-repeat center; background-image:url('../images/content/sensor_circle_border01.png'); z-index:-1; background-size:cover;}
+.list-item:nth-child(even) .sensor-circle-item:before{background-image:url('../images/content/sensor_circle_border02.png');}
+.sensor-circle-item img{position: absolute; top:0; bottom:0; left:0; right:0; margin:auto; padding:2.5rem; max-width:100%; max-height:100%; box-sizing:border-box;}
+.sensor-tab-inner .item-list .list-item .tit{font-size:1.8rem; line-height:1.5; letter-spacing:-0.025em; color:var(--main-color); font-weight:600; }
+.sensor-circle-item.inner-txt{box-shadow:none;}
+.sensor-circle-item.inner-txt:before{display: none;}
+.sensor-circle-item.inner-txt .inner-txt-box{position: absolute; top:50%; transform:translateY(-50%);font-size:1.78rem; line-height:1.41; letter-spacing:0.015em; color:#fff; background:#353d3f; padding:1.5rem 2rem; border-radius:1rem; text-align:left;}
+
+.gas-item-list .list-item .sensor-circle-item:after{position: absolute; content:''; width:10rem; height:1px; border-top:1px dashed #000; top:50%; right:0; transform:translate(100%, 50%); z-index:-2;}
+.gas-item-list .list-item:nth-child(n+3) .sensor-circle-item:after{display: none;}
+
+.sensor-tab-inner .sensor-table{width:100%; border-top:1px solid #222; }
+.sensor-tab-inner .sensor-table thead tr th{background:#f8f8f8; border-right:1px solid #ddd; font-size:1.6rem; line-height:1.55; letter-spacing:-0.025em; color:#222; font-weight:600; padding:1.5rem 1rem;}
+.sensor-tab-inner .sensor-table thead tr th:last-child{border-right:0;}
+.sensor-tab-inner .sensor-table tbody tr td{border-right:1px solid #ddd; border-bottom:1px solid #ddd; font-size:1.55rem; line-height:1.55; letter-spacing:-0.025em; color:#555; padding:1.2rem 0.5rem; text-align:center;}
+.sensor-tab-inner .sensor-table tbody tr td:last-child{border-right:0;}
+.sensor-tab-inner .sensor-table tbody tr:last-child td{border-bottom-color:#222;}
+.sensor-tab-inner .sensor-table tbody tr td.border-right{border-right:1px solid #ddd}
+.sensor-tab-inner .sensor-table tbody tr td.border-bottom{border-bottom-color:#222;}
+
+
+/* 사업분야 센서 :: 컨텐츠03 */
+.sensor-con-03{display: flex; align-items:center; background:no-repeat center; background-size:cover; background-image:url('../images/content/sensor_dust_con03_bg.jpg'); height:63.8rem; margin-bottom:16rem;}
+.sensor-con-03 .tit-box{text-align:center; margin-bottom:6.3rem;}
+.sensor-con-03 .tit-box .tit{font-size:5rem; line-height:1.28; letter-spacing:-0.025em; color:#fff; margin-bottom:2.5rem;}
+.sensor-con-03 .tit-box .txt{font-size:1.8rem; line-height:1.88; letter-spacing:-0.025em; color:rgba(255,255,255,0.7);}
+.sensor-con-03 .check-txt-box{display: grid; justify-content: space-around;}
+.sensor-con-03 .check-txt-box .check-txt{position: relative; font-size:2.6rem; line-height:1.53; letter-spacing:-0.025em; color:#fff; padding-left:5rem; margin-bottom:1.7rem;}
+.sensor-con-03 .check-txt-box .check-txt:before{position: absolute; content:''; background:no-repeat center; background-image:url('../images/common/sensor_check_icon.png'); background-size:cover; width:3rem; height:2.7rem; left:0; top:0.7rem;}
+
+/* 사업분야 센서 :: 컨텐츠04 */
+.sensor-con-04{}
+.sensor-con-04 .tit-box{margin-bottom:10rem;}
+.sensor-con-04 .tit-box .sub-tit{position: relative; display: inline-block; font-size:2.4rem; line-height:1.6; color:var(--main-color); letter-spacing:-0.015em; font-weight:600; padding-left:0.5rem; margin-bottom:1.8rem;}
+.sensor-con-04 .tit-box .sub-tit:before{position: absolute; content:''; width:calc(100% + 1rem); height:1.9rem; background:var(--main-color); opacity:0.07; bottom:0; left:0;}
+
+.sensor-con-04-list .list-item{display: flex; justify-content:space-between; align-items:center; margin-bottom:14rem;}
+.sensor-con-04-list .list-item .img-box{width:43.75%;}
+.sensor-con-04-list .list-item .img-box span{display: block; position: relative; width:100%; height:0; padding-top:57.15%; }
+.sensor-con-04-list .list-item .img-box span img{position: absolute; top:0; left:0; max-width:100%; max-height:100%;}
+.sensor-con-04-list .list-item .txt-box{width:56.25%; padding-left:6.25%;}
+.sensor-con-04-list .list-item .txt-box .sub-tit{display: block; font-size:1.7rem; line-height:1.5; color:var(--main-color); margin-bottom:1.4rem; font-weight:400;}
+.sensor-con-04-list .list-item .txt-box .tit{font-size:3rem; line-height:1.13; letter-spacing:-0.025em; color:#222; font-weight:600; margin-bottom:3rem;}
+.sensor-con-04-list .list-item .txt-box .txt{font-size:1.8rem; line-height:1.66; letter-spacing:-0.025em; color:#888;}
+.sensor-con-04-list .list-item .txt-box .btn-box{display: flex; margin-top:6rem;}
+.sensor-con-04-list .list-item .txt-box .btn-box a{display: block; min-width:26rem; height:6.3rem; line-height:6.3rem; text-align:center; font-size:1.6rem; color:#fff; font-weight:700; background:#000; margin-right:1rem; padding:0 3rem; box-sizing:border-box; }
+.sensor-con-04-list .list-item .txt-box .btn-box a:last-child{margin-right:0;}
+.sensor-con-04-list .list-item .txt-box .btn-box .btn-style02{background:var(--main-color);}
+
+.sensor-con-04-list .list-item.right-item{flex-direction: row-reverse;}
+.sensor-con-04-list .list-item.right-item .txt-box{padding-left:0; padding-right:6.25%;}
+
+/* 사업분야 센서 :: 컨텐츠05 */
+.sensor-con-05{background:rgba(227,6,19,0.04); padding:16rem 0; margin-bottom:17rem}
+.sensor-con-05 .tit-box{text-align:center; margin-bottom:9rem;}
+.sensor-con-05 .tit-box .txt{font-size:1.8rem; line-height:1.66; letter-spacing:-0.025em; color:#333; margin-top:1.4rem;}
+
+.sensor-con-05-list{display: flex;}
+.sensor-con-05-list .list-item{width:25%; padding-right:2rem; box-sizing:border-box;}
+.sensor-con-05-list .list-item .icon{height:50px; margin-bottom:3.5rem;}
+.sensor-con-05-list .list-item .txt-box{}
+.sensor-con-05-list .list-item .txt-box dt{display: flex; align-items:center; font-size:1.8rem; line-height:1.22; color:#000; font-weight:500; height:4.4rem; margin-bottom:2.7rem;}
+.sensor-con-05-list .list-item .txt-box dd{font-size:1.6rem; line-height:1.75; letter-spacing:-0.025em; color:#777;}
+
+/* 사업분야 센서 :: 컨텐츠06 */
+.sensor-con-06{margin-bottom:17rem;}
+.sensor-con-06-box{background:#f7f7f7; padding:8rem 0;}
+.sensor-con-06 .tit-box{text-align:center; margin-bottom:8.7rem;}
+.sensor-con-06 .tit-box .tit{font-size:5rem; line-height:1.28; letter-spacing:-0.025em; color:#000; margin-bottom:1.7rem;}
+.sensor-con-06 .tit-box .txt{font-size:2.6rem; line-height:1.3; letter-spacing:-0.025; color:#222;}
+.sensor-con-06-top{display: flex; align-items:center; margin-bottom:6rem;}
+.sensor-con-06-top .img-box{width:50%; text-align:center; padding:0 3rem; box-sizing:border-box;}
+.sensor-con-06-top .img-box img{max-width:100%;}
+.sensor-con-06-top .txt-box{width:50%; }
+.sensor-con-06-top .txt-box .tit{font-size:3rem; line-height:1.33; letter-spacing:-0.025em; color:#222; font-weight:600; margin-bottom:0.8rem;}
+.sensor-con-06-top .txt-box .sub-tit{font-size:2rem; line-height:1.7; color:#222;}
+.sensor-con-06-top .txt-box .check-txt-box{ margin-top:2.3rem; text-align:left;}
+.sensor-con-06-top .txt-box .check-txt-box .check-txt{position: relative; font-size:1.8rem; line-height:1.66; letter-spacing:-0.025em; color:#888; padding-left:2.5rem;}
+.sensor-con-06-top .txt-box .check-txt-box .check-txt:before{position: absolute; content:'\e928'; font-family:'xeicon'; font-size:1.4rem; color:var(--main-color); top:0.4rem; left:0;}
+
+.sensor-con-06-bottom{display: flex; justify-content:space-between;}
+.sensor-con-06-bottom .list-item{display: flex;  justify-content:space-between; align-items:center; width:32.16%; background:#fff; padding:1.8rem 5rem; box-shadow: 0px 22px 29px 0px rgba(0, 0, 0, 0.11); box-sizing:border-box;}
+.sensor-con-06-bottom .list-item .item-tit{font-size:1.7rem; line-height:1.36; letter-spacing:-0.025em; font-weight:600; color:var(--main-color);}
+
+/* 사업분야 센서 :: 컨텐츠07 */
+.sensor-con-07 .tit-box{margin-bottom:9rem}
+.sensor-con-07 .tit-box .tit{font-size:5rem; line-height:1.28; letter-spacing:-0.025em; color:#000; text-align:center;}
+.sensor-con-07-list{display: flex;}
+.sensor-con-07-list .list-item{display: flex; flex-wrap:wrap; align-content:center; justify-content:center; width:50%; height:48rem; background:no-repeat center; background-size:cover; text-align:center; background-image:url('../images/content/sensor_dust_con07_bg01.jpg');}
+.sensor-con-07-list .list-item:last-child{background-image:url('../images/content/sensor_dust_con07_bg02.jpg');}
+.sensor-con-07-list .list-item .sub-tit{display: block; width:100%; font-size:1.8rem; line-height:1.66; color:#fff; opacity:0.8; font-weight:500; margin-bottom:1.3rem;}
+.sensor-con-07-list .list-item .tit{display: block; width:100%; font-size:4rem; line-height:1.25; letter-spacing:-0.025em; color:#fff; margin-bottom:5rem;}
+.sensor-con-07-list .list-item .btn{display: flex; justify-content:space-between; align-items:center; width:20rem; height:6rem; border:1px solid rgba(255,255,255,0.3); font-size:1.8rem; color:#fff; font-weight:500; padding:0 2.5rem; box-sizing:border-box;}
+.sensor-con-07-list .list-item .btn i{font-size:2.4rem;}
+
+@media all and (max-width:1280px){
+	/* 사업분야 센서 :: top 컨텐츠 */
+	.sensor-top-con{height:70rem;}
+	.sensor-top-list .list-item{padding:5rem 3rem;}
+	.sensor-top-list .list-item .txt-box{padding-left:3rem;}
+	/* 사업분야 센서 :: 컨텐츠06 */
+	.sensor-con-06-bottom .list-item{padding:1.8rem 3rem;}
+}
+@media all and (max-width:800px){
+	.business-page .page-tit{text-align:left; padding:0 var(--area-padding);}
+	.sensor-tit{font-size:3.4rem;}
+	/* 사업분야 센서 :: top 컨텐츠 */
+	.sensor-top-con{height:auto; padding-top:15rem; margin-bottom:15rem;}
+	.sensor-top-list{display: block; padding:0;}
+	.sensor-top-list .list-item{width:100%;}
+	/* 사업분야 센서 :: 컨텐츠01 */
+	.sensor-con-01{margin-bottom:10rem}
+	.sensor-con-01 .tit-box{margin-bottom:5rem;}
+	.sensor-con-01 .sensor-con-list .list-item{padding:3rem 0;}
+	.sensor-con-01 .sensor-con-list .list-item .txt-box{padding-left:3rem;}
+	/* 사업분야 센서 :: 컨텐츠02 */
+	.sensor-con-02{margin-bottom:10rem}
+	.sensor-con-02 > .area > .tit-box{margin-bottom:5rem;}
+	.sensor-con-02-list{display: block; margin-bottom:0;}
+	.sensor-con-02-list .list-item{width:100%; margin-bottom:8rem;}
+	.sensor-con-02-list .list-item:last-child{margin-bottom:0;}
+
+	/* sensor tab style */
+	.sensor-tab-wrapper-style{width:calc(100% + (2 * var(--area-padding))); margin-left:calc(-1 * var(--area-padding));}
+	.sensor-tab-list-style ul{display: block;}
+	.sensor-tab-list-style ul li{display: block; width:100%;}
+	
+	.sensor-tab-inner .item-list{flex-wrap:wrap;}
+	/* .sensor-tab-inner .item-list .list-item{width:calc(50% - 6rem); margin:0 3rem 8rem;} */
+	.sensor-tab-inner .item-list .list-item{width:100% !important; margin:0 20rem 8rem;}
+	.gas-item-list .list-item .sensor-circle-item:after{width: 1px;height: 20rem; border-top:0; border-left: 1px dashed #c4c4c4; top: auto; right: 50%; transform: translate(50%, 100%); bottom: 0;}
+	.sensor-circle-item.inner-txt{padding-top:0; margin-bottom:10rem;}
+	.sensor-circle-item.inner-txt .inner-txt-box{display: inline-block; position: relative; top:auto; transform:none;}
+	/* 사업분야 센서 :: 컨텐츠03 */
+	.sensor-con-03{height:auto; padding:5rem 0; margin-bottom:10rem;}
+	.sensor-con-03 .check-txt-box .check-txt{font-size:2.2rem;}
+	/* 사업분야 센서 :: 컨텐츠04 */
+	.sensor-con-04 .tit-box{margin-bottom:5rem;}
+	.sensor-con-04 .tit-box .sub-tit{font-size:2rem;}
+	.sensor-con-04-list .list-item{display: block; margin-bottom:7rem;}
+	.sensor-con-04-list .list-item .img-box{width:100%; margin-bottom:3rem;}
+	.sensor-con-04-list .list-item .img-box img{max-width:auto; width:100%;}
+	.sensor-con-04-list .list-item .txt-box{width:100%; padding:0 !important;}
+	.sensor-con-04-list .list-item .txt-box .btn-box{margin-top:4rem;}
+	/* 사업분야 센서 :: 컨텐츠05 */
+	.sensor-con-05{padding:10rem 0; margin-bottom:10rem;}
+	.sensor-con-05 .tit-box{margin-bottom:5rem;}
+	.sensor-con-05-list{flex-wrap:wrap;}
+	.sensor-con-05-list .list-item{width:50%; margin-right:0; margin-bottom:5rem;}
+	/* 사업분야 센서 :: 컨텐츠06 */
+	.sensor-con-06{margin-bottom:10rem;}
+	.sensor-con-06-box{width:calc(100% + (2 * var(--area-padding))); margin-left:calc(-1 * var(--area-padding));}
+	.sensor-con-06 .tit-box{margin-bottom:5rem;}
+	.sensor-con-06-top{display: block;}
+	.sensor-con-06-top .img-box{width:100%; text-align:center;}
+	.sensor-con-06-top .txt-box{width:100%; padding:0; text-align:center;}
+	.sensor-con-06-bottom{display: block;}
+	.sensor-con-06-bottom .list-item{width:100%; margin-bottom:3rem; height:13.8rem}
+	.sensor-con-06-bottom .list-item .item-img{width:14rem; text-align:center;}
+	.sensor-con-06-bottom .list-item .item-img img{max-width:100%}
+	/* 사업분야 센서 :: 컨텐츠07 */
+	.sensor-con-07 .tit-box{margin-bottom:3rem;}
+	.sensor-con-07-list{display: block;}
+	.sensor-con-07-list .list-item{width:100%;}
+}
+@media all and (max-width:640px){
+	.sensor-tab-inner .item-list .list-item{margin:0 14rem 8rem;}
+	/* 사업분야 센서 :: 컨텐츠04 */
+	.sensor-con-04-list .list-item .txt-box .btn-box{display: block;}
+	.sensor-con-04-list .list-item .txt-box .btn-box a{width:100%; margin-right:0; margin-bottom:1rem;}
+	/* 사업분야 센서 :: 컨텐츠05 */
+	.sensor-con-05-list{display: block;}
+	.sensor-con-05-list .list-item{width:100%;}
+	.sensor-con-05-list .list-item:last-child{margin-bottom:0;}
+	.sensor-con-05-list .list-item .icon{height:auto; text-align:center; margin-bottom:2rem;}
+	.sensor-con-05-list .list-item .txt-box{text-align:center;}
+	.sensor-con-05-list .list-item .txt-box dt{display: block; height:auto; margin-bottom:2rem;}
+}
+@media all and (max-width:480px){
+	.sensor-tab-inner .item-list .list-item{margin:0 8rem 8rem;}
+}
+
+/* 사업분야 :: IoT 시스템 */
+.iot-page .sensor-top-con .sensor-top-bg{background-image:url('../images/content/iot_top_bg.jpg');}
+.sensor-top-list .list-item .txt-box .txt span{color:#e30613;}
+.iot-page .sensor-top-btn a{width:28.8rem;}
+
+
+.iot-page .sensor-top-list .list-item:nth-child(3){background:rgba(0,0,0,0.75);}
+.iot-page .sensor-top-list .list-item:nth-child(2){background:rgba(20,47,42,0.75);}
+
+.iot-page .sensor-con-02-list .list-item{box-shadow: 0px 2.2rem 2.9rem 0px rgba(0, 0, 0, 0.11);}
+.iot-page .sensor-con-02-list .list-item .item-box{box-shadow:none;}
+.iot-plus-box{position: relative; padding:4rem; box-sizing:border-box;}
+.iot-plus-box:before{position: absolute; content:''; width:calc(100% - 8rem); height:1px; background:#ddd; opacity:0.7; left:4rem; top:0;}
+.iot-plus-item{display: flex; align-items:center; margin-bottom:2rem;}
+.iot-plus-item:last-child{margin-bottom:0;}
+.iot-plus-item .icon{display: block; width:6.5rem; height:6.5rem; border-radius:50%; background:#f7f7f7; line-height:6.5rem; text-align:center;}
+.iot-plus-item dl{width:calc(100% - 6.5rem); padding-left:2.5rem; box-sizing:border-box; }
+.iot-plus-item dl dt{font-size:1.8rem; line-height:1.5; color:#000;font-weight:600;}
+.iot-plus-item dl dd{font-size:1.6rem; line-height:1.75; letter-spacing:-0.025em; color:#777; font-weight:300;}
+.sensor-con-04-list .list-item .txt-box .txt .inner-txt{position: relative; display: block; padding-left:1rem;}
+.sensor-con-04-list .list-item .txt-box .txt .inner-txt:before{position: absolute; content:''; width:0.5rem; height:1px; background:#888; left:0; top:1.4rem;}
+
+.iot-page .sensor-con-04 .tit-box{text-align:center;}
+.iot-page .sensor-con-04 .tit-box .txt{font-size:1.8rem; line-height:1.66; letter-spacing:-0.025em; color:#333; margin-top:2.5rem;}
+
+.iot-con-06{padding:17rem 0; background:#fafafa; margin-bottom:17rem;}
+.iot-con-06 .tit-box{text-align:center; margin-bottom:9rem;}
+.iot-con-06 .tit-box .txt{font-size:1.8rem; line-height:1.66; letter-spacing:-0.025em; color:#333; margin-top:2.5rem;}
+.iot-con-06 .iot-item{position: relative; display: flex; justify-content:space-between; padding:4rem 5rem; box-shadow: 0px 2.2rem 2.9rem 0px rgba(0, 0, 0, 0.11); box-sizing:border-box; background:#fff;}
+.iot-con-06 .iot-item:before{position: absolute; content:''; width:2.6rem; height:2.6rem; top:50%; left:50%; transform:translate(-50%, -50%); background:no-repeat center; background-size:cover; background-image:url('../images/content/iot_con05_arrow.png')}
+.iot-con-06 .iot-item .img-item{display: block; width:calc(100% - 5rem);}
+.iot-con-06 .iot-item .img-item img{max-width:100%;}
+
+.iot-con-07{margin-bottom:10rem;}
+.iot-con-07 .iot-item-list{display: flex; flex-wrap:wrap; justify-content: center;}
+.iot-con-07 .iot-item-list .iot-item{width:26.66%; margin:0 2.3rem 5.5rem; padding-bottom:2.9rem; background:no-repeat center top; background-size:contain; background-image:url('../images/content/iot_con07_itembg.png');}
+.iot-con-07 .iot-item-list .iot-item .icon{display: block; position: relative; width:100%; height:0; padding-top:53.97%; margin-bottom:5rem;}
+.iot-con-07 .iot-item-list .iot-item .icon img{position: absolute; top:0; bottom:0; left:0; right:0; margin:auto; max-width:100%; max-height:100%;}
+.iot-con-07 .iot-item-list .iot-item dl{text-align:center;}
+.iot-con-07 .iot-item-list .iot-item dl dt{font-size:2rem; line-height:1.5; color:var(--main-color); font-weight:600; margin-bottom:1.7rem;}
+.iot-con-07 .iot-item-list .iot-item dl dd{font-size:1.6rem; line-height:1.625; letter-spacing:-0.025em; color:#444;}
+
+.iot-con-08 {margin-bottom:13rem;}
+.iot-con-08 .tit-box{text-align:center; margin-bottom:10rem;}
+.iot-con-08 .iot-item{display: flex; align-items:flex-start;}
+.iot-con-08 .iot-item .left-box{width:56.084%;}
+.iot-con-08 .iot-item .left-box img{max-width:100%;}
+.iot-con-08 .iot-item .right-box{width:43.816%; padding-left:14.5rem; box-sizing:border-box;}
+.iot-con-08 .iot-item .right-box dl{position: relative; padding-left:5.5rem; box-sizing:border-box; margin-bottom:4rem;}
+.iot-con-08 .iot-item .right-box dl:before{position: absolute; content:''; width:3.83rem; height:3.83rem; border-radius:50%; background:var(--main-color); left:0; top:-0.3rem;  opacity:0.15;}
+.iot-con-08 .iot-item .right-box dl:after{position: absolute; content:'\e929'; font-family:'xeicon'; font-size:1.6rem; width:2.36rem; height:2.36rem; line-height:2.5rem; text-align:center; border-radius:50%; background:var(--main-color); margin-left:0.72rem; margin-top:0.72rem; color:#fff; top:-0.3rem; left:0;}
+.iot-con-08 .iot-item .right-box dl dt{position: relative; font-size:2rem; line-height:1.5; color:#000; font-weight:600; margin-bottom:1rem;}
+.iot-con-08 .iot-item .right-box dl dd{font-size:1.6rem; line-height:1.625; letter-spacing:-0.025em; color:#444;}
+
+@media all and (max-width:800px){
+	.iot-con-06{padding:10rem 0; margin-bottom:10rem;}
+	.iot-con-06 .tit-box{margin-bottom:5rem;}
+	.iot-con-06 .iot-item{display: block; padding:4rem 1.5rem;}
+	.iot-con-06 .iot-item .img-item{width:100%; margin-bottom:5rem; text-align:center;}
+	.iot-con-06 .iot-item .img-item:last-child{margin-bottom:0;}
+	.iot-con-06 .iot-item:before{transform:translate(-50%, -50%) rotate(90deg); top: calc(50% - 2.5rem);}
+
+	.iot-con-07 .iot-item-list .iot-item{width:42%; margin:0 2rem 4rem; padding-bottom:5.9rem;}
+	.iot-con-07 .iot-item-list .iot-item .icon{margin-bottom:3rem;}
+
+	.iot-con-08{margin-bottom:10rem;}
+	.iot-con-08 .tit-box{margin-bottom:5rem;}
+	.iot-con-08 .iot-item{display: block;}
+	.iot-con-08 .iot-item .left-box{width:100%; margin-bottom:3rem;}
+	.iot-con-08 .iot-item .right-box{width:100%; padding-left:0;}
+}
+@media all and (max-width:640px){
+	.iot-con-07 .iot-item-list .iot-item{width:100%; margin:0 0rem 4rem;}
+	.iot-con-07 .iot-item-list .iot-item .icon{padding-top:36.97%;}
+}
+
+
+/* 기술소개 :: 센서기술 */
+.technology-tit-box{text-align:center; margin-bottom:7rem;}
+.technology-tit-box .technology-tit{font-size:3.8rem; line-height:1.45; letter-spacing:-0.025em; color:#000; font-weight:700; margin-bottom:1.2rem;}
+.technology-tit-box .technology-txt{font-size:1.8rem; line-height:1.66; letter-spacing:-0.025em; color:#555;}
+.technology-tit-box .technology-btn{width:22rem; height:6rem; display: flex; align-items:center; justify-content:space-between; padding:0 3rem; font-size:1.6rem; color:#fff; background:#000; margin:auto; box-sizing:border-box; margin-top:6rem;}
+.technology-tit-box .technology-btn i{font-size:2.4rem;}
+
+.technology-visual-video .sub-cm-btn-box .sub-cm-btn.style03{width:22rem; border-radius:0; background:var(--main-color);}
+
+.technology-sensor-con01{background:no-repeat center; background-size:cover; background-image:url('../images/content/technology_dust_con01_bg.jpg'); /* padding:13rem 0; */ margin-bottom:13rem; height:96rem; display: flex; align-items:center;}
+.technology-sensor-con01 .area{width:var(--area-width);}
+.technology-sensor-con01 .sensor-item-wrap{display: flex; justify-content:space-between; align-items:center;}
+.technology-sensor-con01 .sensor-item-wrap .left-box{width:64.16%; }
+.technology-sensor-con01 .sensor-item-wrap .left-box .tit{font-size:3.8rem; line-height:1.68; letter-spacing:-0.025em; color:#fff; font-weight:700; margin-bottom:9.5rem;}
+.technology-sensor-con01 .sensor-item-wrap .left-box .info-box{}
+.technology-sensor-con01 .sensor-item-wrap .left-box .info-box dl{position: relative; padding-left:6.5rem; box-sizing:border-box; margin-bottom:4.2rem; cursor:pointer;}
+.technology-sensor-con01 .sensor-item-wrap .left-box .info-box dl:before{position: absolute; content:''; width:5rem; height:5rem; border-radius:50%; background:rgba(255,255,255,0.25); top:-1.4rem; left:0; opacity:0; transition:all 0.4s;}
+.technology-sensor-con01 .sensor-item-wrap .left-box .info-box dl:after{position: absolute; content:'\e914'; font-family:'xeicon'; font-size:1.7rem; width:3rem; height:3rem; line-height:3rem; border-radius:50%; text-align:center; color:#fff; background:rgba(255,255,255,0.2); margin-left:1rem; margin-top:1rem; top:-1.4rem; left:0; transition:all 0.4s;}
+.technology-sensor-con01 .sensor-item-wrap .left-box .info-box dl.active:before{opacity:1; background:rgba(227,6,19,0.25);}
+.technology-sensor-con01 .sensor-item-wrap .left-box .info-box dl.active:after{background:rgba(227,6,19,1);}
+.technology-sensor-con01 .sensor-item-wrap .left-box .info-box dl dt{font-size:2rem; line-height:1.13; letter-spacing:-0.025em; color:#fff; font-weight:500;}
+.technology-sensor-con01 .sensor-item-wrap .left-box .info-box dl dd{font-size:1.7rem; line-height:1.76; letter-spacing:-0.025em; color:#fff; opacity:0.7; margin-top:2.5rem;}
+.technology-sensor-con01 .sensor-item-wrap .right-box{width:35.84%; padding-left:3rem; box-sizing:border-box;}
+.technology-sensor-con01 .sensor-item-wrap .right-box .img{margin:1.6rem 0;}
+.technology-sensor-con01 .sensor-item-wrap .right-box .img img{max-width:100%;}
+
+.technology-sensor-con02{margin-bottom:13rem}
+.technology-sensor-con02 .sensor-item{display: flex; justify-content:center; align-items:center; background:#f7f7f7; margin-bottom:2.2rem; min-height:57.6rem;}
+.technology-sensor-con02 .sensor-item:last-child{margin-bottom:0;}
+.technology-sensor-con02 .sensor-item .img-box{width:50%; padding:5rem; box-sizing:border-box; text-align:center;}
+.technology-sensor-con02 .sensor-item .img-box img{max-width:100%;}
+.technology-sensor-con02 .sensor-item .txt-box{width:50%; padding:5rem 0; padding-left:3.5rem; box-sizing:border-box;}
+.technology-sensor-con02 .sensor-item .txt-box .tit{font-size:2.4rem; line-height:1.33; letter-spacing:-0.025em; color:#222; font-weight:600; margin-bottom:1rem;}
+.technology-sensor-con02 .sensor-item .txt-box .caption{font-size:1.65rem; line-height:1.66; letter-spacing:-0.025em; color:var(--main-color);}
+.technology-sensor-con02 .sensor-item .txt-box .caption i{font-size:2.1rem; position: relative; top:3px;}
+.technology-sensor-con02 .sensor-item .txt-box .btn-list{margin-top:4rem;}
+.technology-sensor-con02 .sensor-item .txt-box .btn-list a{display: flex; align-items:center; justify-content:space-between; max-width:42.4rem; height:6rem; padding:0 3rem; font-size:1.7rem; line-height:1.36; letter-spacing:-0.025em; color:#000; font-weight:600; background:#fff; border:1px solid #eee; box-sizing:border-box; margin-bottom:1.2rem; transition:all 0.4s;}
+.technology-sensor-con02 .sensor-item .txt-box .btn-list a:last-child{margin-bottom:0;}
+.technology-sensor-con02 .sensor-item .txt-box .btn-list a i{font-size:2.4rem;}
+.technology-sensor-con02 .sensor-item .txt-box .btn-list a:hover{border-color:#000;}
+
+.technology-sensor-con03{}
+.tec-con03-item{margin-bottom:13rem;}
+.tec-con03-item .technology-tit-box{margin-bottom:6rem;}
+.tec-con03-item .technology-tit-box .technology-tit{margin-bottom:2.2rem}
+.tec-con03-item .check-list{display: flex; justify-content:center; margin-bottom:6rem;}
+.tec-con03-item .check-list .check-txt{position: relative; padding-left:4.5rem; font-size:2.2rem; line-height:1.81; letter-spacing:-0.025em; color:#000; font-weight:600; margin:0 4.4rem;}
+.tec-con03-item .check-list .check-txt:before{position: absolute; content:''; width:3rem; height:2.7rem; left:0; top:0.6rem; background:no-repeat center; background-size:cover; background-image:url('../images/common/sensor_check_icon.png');}
+
+/* 비디오 영역 Start */
+.tec-con03-item .video-iframe-wrapper{position:relative; margin:0px auto 7rem; overflow:hidden;}
+.tec-con03-item .video-iframe-box{position:relative; padding-top:49.88%; height:0; background-color:#000}
+.tec-con03-item .video-iframe-box iframe{position:absolute; top:0px; left:0px; width:100%; height:100%;}
+.tec-con03-item .video-cover-box{position:absolute; top:0px; left:0px; width:100%; height:100%; cursor:pointer ;  }
+.tec-con03-item .video-cover-box:after{position:absolute; top:0px; left:0px; width:100%; height:100%; cursor:pointer ; background-color:rgba(0,0,0,0.4); content:"";}
+.tec-con03-item .video-cover-box .thumb{display:block; width:100%; height:100%;-webkit-transition:all 0.3s;-moz-transition:all 0.3s;-o-transition:all 0.3s;-ms-transition:all 0.3s;transition:all 0.3s}
+.tec-con03-item .video-cover-box .thumb img{width:100%; height:100%;}
+.tec-con03-item .video-cover-box:hover .thumb{
+	-ms-transform: scale(1.1) rotate(0.002deg);
+	  -o-transform: scale(1.1) rotate(0.002deg);
+	  -moz-transform: scale(1.1) rotate(0.002deg);
+	  -webkit-transform: scale(1.1) rotate(0.002deg);
+	  transform: scale(1.1) rotate(0.002deg);
+}
+/* .video-cover-box .icon{position:absolute; top:50%; left:50%;  z-index:1; -ms-transform: translate(-50%, -50%);
+-o-transform: translate(-50%, -50%);
+-moz-transform: translate(-50%, -50%);
+-webkit-transform: translate(-50%, -50%);
+transform: translate(-50%, -50%);}
+.video-cover-box .icon i{font-size:60px; color:#fff; line-height:50px; text-shadow:1px 1px 10px rgba(0, 0, 0, .5);} */
+
+
+.tec-con03-item .info-box{display: flex; align-items:center; border-bottom:1px solid #ddd; padding-bottom:7rem;}
+.tec-con03-item .info-box .left-box{width:50%;}
+.tec-con03-item .info-box .left-box .tit{font-size:1.87rem; line-height:1.13; letter-spacing:-0.025em; color:var(--main-color); font-weight:600; margin-bottom:2rem;}
+.tec-con03-item .info-box .left-box .sub-tit{display: block; font-size:3rem; line-height:1.33; letter-spacing:-0.025em; color:#222; font-weight:600; margin-bottom:2.4rem;}
+.tec-con03-item .info-box .left-box .txt{font-size:1.8rem; line-height:1.66; letter-spacing:-0.025em; color:#888;}
+.tec-con03-item .info-box .right-box{width:50%; text-align:right; padding-left:3rem; box-sizing:border-box;}
+.tec-con03-item .info-box .right-box span img{max-width:100%;}
+.tec-con03-item:nth-child(2) .info-box{border-bottom:none; padding-bottom:0;}
+.tec-con03-item:nth-child(2) .info-box .left-box{width:40%;}
+.tec-con03-item:nth-child(2) .info-box .right-box{width:60%;}
+
+/* tec03 :: 가스센서 */
+.technology-tit-box .tec-03-sub-tit{display: block; font-size:2rem; line-height:1.7rem; letter-spacing:-0.025em; color:var(--main-color); margin-bottom:2rem; font-weight:600;}
+.technology-tit-box .technology-txt span{display: block; font-size:1.8rem; line-height:1.88; letter-spacing:-0.025em; color:#999;}
+
+.tec-03-caption-txt{margin-top:4.7rem;}
+.tec-03-caption-txt.center{display: grid; justify-items: start; justify-content: center;}
+.tec-03-caption-txt .caption-txt{position: relative; font-size:1.66rem; line-height:1.66; letter-spacing:-0.025em; color:var(--main-color); padding-left:2.5rem;}
+.tec-03-caption-txt .caption-txt:before{position: absolute; content:'\e9aa'; font-family:'xeicon'; font-size:2.1rem; top:-0.3rem; left:0; color:var(--main-color);}
+
+.info-table{border-bottom:1px solid #ddd; padding-bottom:7rem;}
+.tec-03-table{width:100%; border-top:1px solid #bbb;}
+.tec-03-table thead tr th{font-size:2rem; line-height:2; letter-spacing:-0.025em; color:#000; font-weight:600; background:#f2f2f2; border-right:1px solid #ddd; border-bottom:1px solid #ddd;}
+.tec-03-table thead tr th:last-child{border-right:0;}
+.tec-03-table tbody tr th{font-size:1.8rem; line-height:1.55; letter-spacing:-0.025em; color:#222; font-weight:600; background:#f2f2f2; border-right:1px solid #ddd; border-bottom:1px solid #ddd;}
+.tec-03-table tbody tr td{font-size:1.8rem; line-height:1.55; letter-spacing:-0.025em; color:#555; border-right:1px solid #ddd; border-bottom:1px solid #ddd; text-align:center; padding:1rem;}
+.tec-03-table tbody tr td:last-child{border-right:0;}
+.tec-03-table tbody tr td .inner-txt{display: grid; justify-items: start; justify-content: center;}
+
+.tec-con03-txt-list{margin-bottom:6rem;}
+.tec-con03-txt-list .txt{font-size:2rem; line-height:1.7rem; letter-spacing:-0.025em; color:var(--main-color); text-align:center; font-weight:600; margin-bottom:4.5rem;}
+.tec-con03-txt-list .list-wrap{display: flex;}
+.tec-con03-txt-list .list-wrap dl{width:25%;}
+.tec-con03-txt-list .list-wrap dl .num{width:3.11rem; height:3.11rem; border-radius:3.11rem; background:var(--main-color); text-align:center; line-height:3.11rem; font-size:1.8rem; color:#fff; font-weight:600; margin:auto; margin-bottom:1rem;}
+.tec-con03-txt-list .list-wrap dl dd{font-size:2.2rem; line-height:1.81; letter-spacing:-0.025em; color:#000; font-weight:600; text-align:center;}
+
+.info-box02{margin:13rem 0 6rem;}
+.info-box02 .inner-box{display: flex; align-items:center;}
+.info-box02 .inner-box .left-box{width:50%;}
+.info-box02 .inner-box .left-box img{max-width:100%;}
+.info-box02 .inner-box .right-box{width:50%; padding-left:5rem;}
+.info-box02 .inner-box .right-box .inner-tit{font-size:2.4rem; line-height:1.41; letter-spacing:-0.025em; color:#222; font-weight:600; margin-bottom:3rem;}
+.info-box02 .inner-box .right-box .inner-txt{position: relative; font-size:1.66rem; line-height:1.66; letter-spacing:-0.025em; color:#555; padding-left:3rem; margin-bottom:1.2rem;}
+.info-box02 .inner-box .right-box .inner-txt:before{position: absolute; content:'\e9aa'; font-family:'xeicon'; font-size:2.1rem; top:-0.2rem; left:0; color:#555;}
+
+
+.technology-sensor-banner{height:57.5rem; background:no-repeat center; background-size:cover; display: flex; align-items:flex-end;}
+.technology-sensor-banner .area{width:100%;}
+.technology-sensor-banner .tit{font-size:5rem; line-height:1.28; letter-spacing:-0.025em; color:#fff; font-weight:700; margin-bottom:4rem;}
+.technology-sensor-banner .txt{font-size:1.8rem; line-height:1.66; letter-spacing:-0.025em; color:#fff;  margin-bottom:9rem;}
+
+.technology-sensor-banner.banner01{background-image:url('../images/content/technology_banner01.jpg'); margin-bottom:13rem;}
+.technology-sensor-banner.banner02{background-image:url('../images/content/technology_banner02.jpg'); margin-bottom:7rem;}
+
+.technology-sensor-con04{padding-bottom:13rem;}
+.tec-con04-list{display: flex; flex-wrap:wrap;}
+.tec-con04-item{width:33.33%; padding-right:3rem; box-sizing:border-box; margin-bottom:6rem;}
+.tec-con04-item .icon{display: block; height:50px;}
+.tec-con04-item dl{margin-top:2.5rem;}
+.tec-con04-item dl dt{font-size:1.8rem; line-height:1.5; color:#000; font-weight:500; margin-bottom:3.3rem;}
+.tec-con04-item dl dd{font-size:1.6rem; line-height:1.75; letter-spacing:-0.025em; color:#777; font-weight:300;}
+
+.pc{display: block;}
+.mobile{display: none;}
+
+@media all and (max-width:1280px){
+	.technology-sensor-con01 .area{width:100%;}
+}
+@media all and (max-width:800px){
+	.pc{display: none;}
+	.mobile{display: block;}
+
+	.cm-page-tit{font-size:5rem; text-align:left; padding:0 var(--area-padding); margin:7rem 0 5rem}
+	.technology-tit-box{margin-bottom:4rem;}
+	.technology-tit-box .technology-btn{margin-top:4rem}
+
+	.technology-sensor-con01{padding:10rem 0; height:144rem;}
+	.technology-sensor-con01 .sensor-item-wrap{display: block;}
+	.technology-sensor-con01 .sensor-item-wrap .left-box{width:100%; margin-bottom:3rem;}
+	.technology-sensor-con01 .sensor-item-wrap .left-box .tit{margin-bottom:5rem;}
+	.technology-sensor-con01 .sensor-item-wrap .right-box{width:100%; padding-left:0;}
+	.technology-sensor-con01 .sensor-item-wrap .right-box img{max-width:none; width:100%;}
+
+	.technology-sensor-con02 .sensor-item{flex-wrap:wrap; padding:3rem;}
+	.technology-sensor-con02 .sensor-item .img-box{width:100%; padding:0;}
+	.technology-sensor-con02 .sensor-item .txt-box{width:100%; padding:0;}
+	.technology-sensor-con02 .sensor-item .txt-box .btn-list a{max-width:none;}
+
+	.tec-con03-item{margin-bottom:7rem;}
+	.tec-con03-item .technology-tit-box{margin-bottom:4rem;}
+	.tec-con03-item .check-list{display: grid;}
+	.tec-con03-item .check-list .check-txt{font-size:2rem; padding-left:3rem;}
+	.tec-con03-item .check-list .check-txt:before{width:2.5rem; height:2.2rem;}
+	.tec-con03-item .video-iframe-box{padding-top:59.14%}
+	.tec-con03-item .info-box{display: block; padding-bottom:4rem;}
+	.tec-con03-item .info-box .left-box,
+	.tec-con03-item:nth-child(2) .info-box .left-box{width:100%; margin-bottom:6rem;}
+	
+	.tec-con03-item .info-box .right-box,
+	.tec-con03-item:nth-child(2) .info-box .right-box{width:100%; padding-left:0;}
+	.tec-con03-item .info-box .right-box span img{display: block; max-width:none; width:100%; margin-bottom:2rem}
+
+	.tec-03-caption-txt.center{display: block; text-align:left;}	
+	.tec-con03-txt-list .list-wrap{display: block;}
+	.tec-con03-txt-list .list-wrap dl{width:100%; margin-bottom:4rem;}
+	.tec-con03-txt-list .list-wrap dl:last-child{margin-bottom:0;}
+	.tec-con03-txt-list .list-wrap dl dd{font-size:1.8rem;}
+	.tec-con03-txt-list .txt{font-size:1.8rem;}
+
+	.info-box02 .inner-box{display: block;}
+	.info-box02 .inner-box .left-box{width:100%; margin-bottom:3rem;}
+	.info-box02 .inner-box .left-box img{max-width:none; width:100%}
+	.info-box02 .inner-box .right-box{width:100%; padding-left:0rem;}
+
+	.technology-sensor-banner .tit{font-size:4rem;}
+	.technology-sensor-banner .txt{font-size:1.6rem; margin-bottom:6rem;}
+	.technology-sensor-banner.banner01{margin-bottom:7rem;}
+
+	.technology-sensor-con04{padding-bottom:0;}
+	.tec-con04-item{width:100%; text-align:center; padding-right: 0;}
+	.tec-con04-item dl{margin-top:0.5rem;}
+	.tec-con04-item dl dt{margin-bottom:1.5rem;}
+}
+@media all and (max-width:480px){
+	.technology-sensor-con01{height:auto; padding:7rem 0;}
+
+	.technology-sensor-banner{height:73.5rem}
+	.technology-sensor-banner.banner01{background-image:url('../images/content/technology_banner01_m.jpg');}
+	.technology-sensor-banner.banner02{background-image:url('../images/content/technology_banner02_m.jpg');}
+}
+
+/* product 표 테두리 수정 */
+.bd-bottom{border-bottom-color:#222 !important;}
