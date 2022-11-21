@@ -29,7 +29,7 @@
     <!-- //accessibility -->
     <!-- code -->
     <div id="wrap" class="sub-wrap black-ver  ">
-
+        <?php include "../_inc/header.php"; ?>
         <!-- container -->
         <div id="container">
             <!-- visual -->

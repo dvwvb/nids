@@ -51,26 +51,26 @@
              <!-- <div id="gnbBg"></div> -->
              <ul class="clearfix area-box">
                  <li class="gnb1">
-                     <a href="sensor_dust.html">사업분야</a>
+                     <a href="sensor_dust.php">사업분야</a>
                      <div class="gnb-2dep">
                          <ul>
                              <li>
-                                 <a href="sensor_dust.html"><span>환경센서</span></a>
+                                 <a href="sensor_dust.php"><span>환경센서</span></a>
                                  <ul class="gnb-3dep">
-                                     <li><a href="sensor_dust.html"><span>먼지센서</span></a></li>
-                                     <li><a href="sensor_gas.html"><span>가스센서</span></a></li>
+                                     <li><a href="sensor_dust.php"><span>먼지센서</span></a></li>
+                                     <li><a href="sensor_gas.php"><span>가스센서</span></a></li>
                                  </ul>
                              </li>
                              <li>
-                                 <a href="plasma.html"><span>공기살균 & 탈취</span></a>
+                                 <a href="plasma.php"><span>공기살균 & 탈취</span></a>
                                  <ul class="gnb-3dep">
-                                     <li><a href="plasma.html"><span>플라즈마 모듈</span></a></li>
-                                     <li><a href="photocatalytic.html"><span>광촉매 모듈</span></a></li>
-                                     <li><a href="hepa.html"><span>향균헤파필터</span></a></li>
+                                     <li><a href="plasma.php"><span>플라즈마 모듈</span></a></li>
+                                     <li><a href="photocatalytic.php"><span>광촉매 모듈</span></a></li>
+                                     <li><a href="hepa.php"><span>향균헤파필터</span></a></li>
                                  </ul>
                              </li>
                              <li>
-                                 <a href="iot.html"><span>IoT 시스템</span></a>
+                                 <a href="iot.php"><span>IoT 시스템</span></a>
                              </li>
                          </ul>
                      </div>
