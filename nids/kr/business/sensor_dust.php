@@ -3,7 +3,6 @@
 
 <head>
     <?php include "../_inc/config.php"; ?>
-
     <script>
         //  1번째  대메뉴 인덱스
         dep1 = 1
