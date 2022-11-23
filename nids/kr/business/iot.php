@@ -21,7 +21,7 @@
     </div>
     <!-- //accessibility -->
     <!-- code -->
-    <div id="wrap" class="sub-wrap   business-wrap">
+    <div id="wrap" class="sub-wrap business-wrap">
         <!-- header -->
 
         <?php include "../_inc/header.php"; ?>
