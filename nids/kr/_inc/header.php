@@ -6,7 +6,7 @@
          <!-- ****************** 헤더상단 ********************** -->
          <div id="headerInner" class="area-wide">
              <h1 class="logo">
-                 <a href="../index-2.html" title="to home">
+                 <a href="/nids/kr/index.php" title="to home">
                      <svg id="Layer_2" class="logo-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 395.24 162.94">
                          <g id="Layer_1-2">
                              <g>
@@ -51,69 +51,69 @@
              <!-- <div id="gnbBg"></div> -->
              <ul class="clearfix area-box">
                  <li class="gnb1">
-                     <a href="sensor_dust.php">사업분야</a>
+                     <a href="/nids/kr/business/sensor_dust.php">사업분야</a>
                      <div class="gnb-2dep">
                          <ul>
                              <li>
-                                 <a href="sensor_dust.php"><span>환경센서</span></a>
+                                 <a href="/nids/kr/business/sensor_dust.php"><span>환경센서</span></a>
                                  <ul class="gnb-3dep">
-                                     <li><a href="sensor_dust.php"><span>먼지센서</span></a></li>
-                                     <li><a href="sensor_gas.php"><span>가스센서</span></a></li>
+                                     <li><a href="/nids/kr/business/sensor_dust.php"><span>먼지센서</span></a></li>
+                                     <li><a href="/nids/kr/business/sensor_gas.php"><span>가스센서</span></a></li>
                                  </ul>
                              </li>
                              <li>
-                                 <a href="plasma.php"><span>공기살균 & 탈취</span></a>
+                                 <a href="/nids/kr/business/plasma.php"><span>공기살균 & 탈취</span></a>
                                  <ul class="gnb-3dep">
-                                     <li><a href="plasma.php"><span>플라즈마 모듈</span></a></li>
-                                     <li><a href="photocatalytic.php"><span>광촉매 모듈</span></a></li>
-                                     <li><a href="hepa.php"><span>향균헤파필터</span></a></li>
+                                     <li><a href="/nids/kr/business/plasma.php"><span>플라즈마 모듈</span></a></li>
+                                     <li><a href="/nids/kr/business/photocatalytic.php"><span>광촉매 모듈</span></a></li>
+                                     <li><a href="/nids/kr/business/hepa.php"><span>향균헤파필터</span></a></li>
                                  </ul>
                              </li>
                              <li>
-                                 <a href="iot.php"><span>IoT 시스템</span></a>
+                                 <a href="/nids/kr/business/iot.php"><span>IoT 시스템</span></a>
                              </li>
                          </ul>
                      </div>
                  </li>
                  <li class="gnb2">
-                     <a href="../technology/sensor_dust.html">기술소개</a>
+                     <a href="/nids/kr/technology/sensor_dust.php">기술소개</a>
                      <div class="gnb-2dep">
                          <ul>
                              <li>
-                                 <a href="../technology/sensor_dust.html"><span>센서기술</span></a>
+                                 <a href="/nids/kr/technology/sensor_dust.php"><span>센서기술</span></a>
                                  <ul class="gnb-3dep">
-                                     <li><a href="../technology/sensor_dust.html"><span>먼지센싱기술</span></a></li>
-                                     <li><a href="../technology/sensor_gas.html"><span>가스센싱기술</span></a></li>
+                                     <li><a href="/nids/kr/technology/sensor_dust.php"><span>먼지센싱기술</span></a></li>
+                                     <li><a href="/nids/kr/technology/sensor_gas.php"><span>가스센싱기술</span></a></li>
                                  </ul>
                              </li>
                              <li>
-                                 <a href="../technology/plasma.html"><span>공기살균 & 탈취 기술</span></a>
+                                 <a href="/nids/kr/technology/plasma.php"><span>공기살균 & 탈취 기술</span></a>
                                  <ul class="gnb-3dep">
-                                     <li><a href="../technology/plasma.html"><span>플라즈마 기술</span></a></li>
-                                     <li><a href="../technology/photocatalytic.html"><span>광촉매 기술</span></a></li>
-                                     <li><a href="../technology/hepa.html"><span>향균헤파필터</span></a></li>
+                                     <li><a href="/nids/kr/technology/plasma.php"><span>플라즈마 기술</span></a></li>
+                                     <li><a href="/nids/kr/technology/photocatalytic.php"><span>광촉매 기술</span></a></li>
+                                     <li><a href="/nids/kr/technology/hepa.php"><span>향균헤파필터</span></a></li>
                                  </ul>
                              </li>
                          </ul>
                      </div>
                  </li>
                  <li class="gnb3">
-                     <a href="../company/intro.html">회사소개</a>
+                     <a href="/nids/kr/company/intro.php">회사소개</a>
                      <div class="gnb-2dep">
                          <ul>
-                             <li><a href="../company/intro.html"><span>회사개요</span></a></li>
-                             <li><a href="../company/greeting.html"><span>CEO 인사말</span></a></li>
-                             <li><a href="../company/news.html"><span>뉴스</span></a></li>
+                             <li><a href="/nids/kr/company/intro.php"><span>회사개요</span></a></li>
+                             <li><a href="/nids/kr/company/greeting.php"><span>CEO 인사말</span></a></li>
+                             <li><a href="/nids/kr/company/news.php"><span>뉴스</span></a></li>
                          </ul>
                      </div>
                  </li>
                  <li class="gnb4">
-                     <a href="../customer/online.html">고객센터</a>
+                     <a href="/nids/kr/customer/online.php">고객센터</a>
                      <div class="gnb-2dep">
                          <ul>
-                             <li><a href="../customer/online.html"><span>Contact us</span></a></li>
-                             <li><a href="../customer/faq.html"><span>FAQ</span></a></li>
-                             <li><a href="../customer/recruit.html"><span>인재채용</span></a></li>
+                             <li><a href="/nids/kr/customer/online.php"><span>Contact us</span></a></li>
+                             <li><a href="/nids/kr/customer/faq.php"><span>FAQ</span></a></li>
+                             <li><a href="/nids/kr/customer/recruit.php"><span>인재채용</span></a></li>
                          </ul>
                      </div>
                  </li>

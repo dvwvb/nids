@@ -3,21 +3,10 @@
 
 <head>
     <?php include "../_inc/config.php"; ?>
-    <style>
-        #topMenu01,
-        #topMenuM02 {
-            display: none;
-        }
-    </style>
-
     <script>
-        //  1번째  대메뉴 인덱스
-        dep1 = 1
-        // dep1 = 01,
+        dep1 = 4
         dep2 = 02;
-        // sub2_num 변수가 있을때 ( 3차메뉴 )
-        dep3 = 03;
-        //console.log(dep3);
+        dep3 = "";
     </script>
 </head>
 
@@ -28,163 +17,147 @@
     </div>
     <!-- //accessibility -->
     <!-- code -->
-    <div id="wrap" class="sub-wrap black-ver  ">
+    <div id="wrap" class="sub-wrap   ">
+        <!-- header -->
         <?php include "../_inc/header.php"; ?>
+
         <!-- container -->
         <div id="container">
             <!-- visual -->
+            <!-- 서브비주얼 없을때 visual_type ="none" -->
+            <section id="visual" class="sub-visual-customer">
+                <div class="visual-img-con">
+                    <div class="visual-img-inner" style="background:#eee url(../../images/layout/sub_visual_customer.jpg) no-repeat 70% 0%"></div>
+                </div>
+                <div class="area visual-txt-con">
+                    <div class="table-cell-layout">
+                        <div class="visual-txt-container">
+                            <h2 class="visual-tit trans400">
+                                Contact us </h2>
+                            <p class="visual-sub-txt">With Aivom’s Plasma Technology, <br class="m-br">Eliminate</p>
+                            <div class="location">
+                                <ul>
+                                    <li><a href="../index.html" title="HOME"><i class="xi-home"></i></a></li>
+                                    <li>Contact us</li>
+                                    <li>FAQ</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
             <!-- //visual -->
             <!-- middleArea -->
             <div id="middleArea">
                 <!-- ****************** 서브메뉴 ********************** -->
+                <!--  모든 서브메뉴 : fixed될때 fixed-sub-menu, top-fixed-object 클래스 추가  -->
+                <!-- 서브메뉴1 -->
+                <aside id="topMenu01" class="">
+                    <div class="side-menu-inner">
+                        <div class="area">
+                            <ul class="snb sub-menu-customer clearfix">
+                                <li><a href="online.html"><span>Contact us</span></a></li>
+                                <li><a href="faq.html"><span>FAQ</span></a></li>
+                                <li><a href="recruit.html"><span>인재채용</span></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </aside>
+                <!-- // -->
+
+                <!-- 모바일 서브메뉴 2 -->
+                <aside id="topMenuM02" class="cm-top-menu clearfix">
+                    <div class="side-menu-inner clearfix">
+                        <!-- 2차메뉴 -->
+                        <div class="menu-location  location2 cm-drop-menu-box-JS" data-drop-event="click">
+                            <button class="cur-location cm-drop-open-btn-JS">
+                                <span>FAQ</span>
+                                <i class="xi-caret-down-circle-o arrow"></i>
+                            </button>
+                            <ul class="location-menu-con cm-drop-list-JS">
+                                <li><a href="online.html"><span>Contact us</span></a></li>
+                                <li><a href="faq.html"><span>FAQ</span></a></li>
+                                <li><a href="recruit.html"><span>인재채용</span></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </aside>
+                <!-- // -->
 
                 <!-- 2차&3차 같이 있는 타입 -->
-                <?php include "../_inc/productTop.php"; ?>
 
 
                 <!-- content -->
-                <section id="content" class="wide ">
+                <section id="content" class="area ">
+                    <article class="cm-sub-tit-box" data-scroll="fade-up">
+                        <div class="area">
+                            <h2 class="tit">FAQ</h2>
+                            <p class="sub-tit">도시환경의 기술정보가 필요한 곳에 엔아이디에스가 있습니다.</p>
+                        </div>
+                    </article>
 
-                    <section class="sub-page product-page">
-                        <article class="prd-cm-top-con hepa-top-con" data-scroll="fade-up">
-                            <div class="area">
-                                <div class="tit-box">
-                                    <strong class="sub-tit">NIDS Antivirus HEPA Module</strong>
-                                    <h2 class="tit">향균헤파 필터</h2>
-                                </div>
-                                <div class="img-box"><img src="../../images/content/prd_hepa_top_img.jpg" alt=""></div>
-                                <div class="txt-box">
-                                    <p class="txt">NIDS Antivirus HEPA Technology Is <br class="m-br">innovative and essential.</p>
-                                </div>
-                                <div class="sub-cm-btn-box">
-                                    <a href="../support/online.html" class="sub-cm-btn style01"><span>문의하기</span><i class="xi-border-color"></i></a>
-                                    <a href="#" class="sub-cm-btn style02"><span>관련카달로그</span><i class="xi-document"></i></a>
-                                </div>
-                            </div>
-                        </article>
-                        <article class="hepa-con01">
-                            <div class="hepa-con01-area" data-scroll="fade-up">
-                                <div class="hepa-con01-txt">
-                                    <div class="area">
-                                        <h5>우리집 공기청정기, <br><b class="font-color-point">알레르기 호흡기 질환을 유발</b>하는 사실 알고 계신가요?</h5>
-                                        <p>오염된 필터에는 박테리아 및 미생물이 서식할 수 있으며 <br class="pc-br">오염된 필터가 장착된 공기청정기, 에어컨을 지속적으로 사용할 경우 알레르기, 호흡기 질환을 유발합니다</p>
+                    <article class="sub-page customer-page" data-scroll="fade-up">
+                        <!-- skin - faq - F02-->
+                        <script type="text/javascript">
+                            $(document).ready(function() {
+                                // FAQ Toggle
+                                $(".bbs-faq-list").each(function() {
+                                    var $faqItem = $(this).find(".faq-item");
+
+                                    $faqItem.children("dt").click(function() {
+                                        var $faqCon = $(this).siblings();
+                                        if ($faqCon.css("display") == "block") {
+                                            $(this).siblings().slideUp();
+                                            $(".faq-item").removeClass("open");
+                                        } else {
+                                            $(".faq-item > dd:visible").slideUp();
+                                            $(".faq-item").removeClass("open");
+                                            $(this).parent("dl").addClass("open");
+                                            $faqCon.slideDown();
+                                        }
+                                    });
+                                });
+                            });
+                        </script>
+                        <!-----------------------------------------------------  게시판 리스트 시작 -------------------------------------------------------------------------------------------->
+
+                        <!-- FAQ형 시작 -->
+
+                        <article class="faq-list-con2 faq-category-list-con bbs-faq-list">
+                            <dl class="faq-item">
+                                <dt>
+                                    <div class="faq-subject">
+                                        <span class="question-icon">Q</span>
+                                        <span class="faq-category">[본사]</span>
+                                        <strong class="faq-title">본사 FAQ 게시판입니다.</strong>
+                                        <span class="arrow"><i class="xi-angle-down-min"></i></span>
                                     </div>
-                                </div>
-                            </div>
-                        </article>
-                        <article class="hepa-con02">
-                            <div class="area">
-                                <h4 class="plasma-con02-tit" data-scroll="fade-up">NIDS 향균헤파필터의 <br class="m-br">핵심 3가지</h4>
-                                <div class="cm-gray-list-box" data-scroll="fade-up">
-                                    <ul class="txt-list">
-                                        <li>
-                                            <p class="check-dot-txt">자체 기술로 제조한 항균 필터여재 원단 사용</p>
-                                        </li>
-                                        <li>
-                                            <p class="check-dot-txt"><span class="point">항균력 99.9%</span> 공인시험기관 시험 인증</p>
-                                        </li>
-                                        <li>
-                                            <p class="check-dot-txt">무기항균물질로서 <span class="point">무독성, 인체안전성</span> 확보</p>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </article>
-                        <article class="hepa-con03">
-                            <div class="area">
-                                <div class="hepa-con03-txt" data-scroll="fade-up">
-                                    <h5>항균필터여재 및 항균제</h5>
-                                    <p>2차 오염원인 박테리아 제거를 위하여 <br class="pc-br">
-                                        무기항균제를 원단자체에 적용하여 항균성 부여 <br class="pc-br">
-                                        ‘필터형 보존처리제품’에 항균처리 목적으로 승인된 <br class="pc-br">
-                                        ‘살생물 물질’을 항균제로 적용</p>
-                                </div>
-                                <div class="hepa-con03-img" data-scroll="fade-up">
-                                    <ul>
-                                        <li>
-                                            <div class="img"><img src="../../images/content/prd_hepa_con03_img_01.png" alt=""></div>
-                                            <div class="txt">
-                                                <h5>SEM image</h5>
-                                                <p>x2000</p>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="img"><img src="../../images/content/prd_hepa_con03_img_02.png" alt=""></div>
-                                            <div class="txt">
-                                                <h5>SEM image</h5>
-                                                <p>x4000</p>
-                                            </div>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </article>
-                        <article class="hepa-con04">
-                            <div class="area">
-                                <h5 class="hepa-con04-tit" data-scroll="fade-up">원단의 항균력, 유해물질 검출에 대한 공인기관의 시험평가 완료</h5>
-                                <p class="hepa-con04-txt" data-scroll="fade-up">*시험법 KS K 0693 / 시험균주 : 황색포도상구균, 폐렴간균, 대장균, 녹농균</p>
-                                <div class="hepa-con04-wrapper">
-                                    <span class="hepa-con04-list-tit" data-scroll="fade-up">녹농균</span>
-                                    <ul class="hepa-con04-list" data-scroll="fade-up">
-                                        <li class="hepa-con04-item">
-                                            <div class="img"><img src="../../images/content/prd_hepa_con04_img_01.jpg" alt=""></div>
-                                            <div class="txt">
-                                                <h5>[그림] 항균성 시험사진 : 시험군 vs 대조군</h5>
-                                                <p>*균주 : Staphylococcus ATCC 6538</p>
-                                            </div>
-                                        </li>
-                                        <li class="hepa-con04-item">
-                                            <div class="img"><img src="../../images/content/prd_hepa_con04_img_02.jpg" alt=""></div>
-                                            <div class="txt">
-                                                <h5>[그림] 항균성 시험사진 : 시험군 vs 대조군</h5>
-                                                <p>*균주 : Escherichia coli ATCC 25922</p>
-                                            </div>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </article>
-                        <article class="plasma-con03">
-                            <div class="prd-cm-video-con" data-scroll="fade-up">
-                                <div class="area">
-                                    <div class="video-box">
-                                        <iframe width="560" height="315" src="https://www.youtube.com/embed/bdsxRgm8_Ts" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                </dt>
+                                <dd>
+                                    <span class="answer-icon">A</span>
+                                    <div class="answer-con">
+                                        <div class="editor">
+                                            본사 FAQ 게시판입니다.<br><br> </div>
                                     </div>
-                                    <div class="sub-cm-btn-box">
-                                        <a href="../technology/hepa.html" class="sub-cm-btn style01"><span>향균헤파 기술 자세히 보기</span><i class="xi-search"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </article>
-                        <article class="prd-cm-link-con">
-                            <div class="area-box">
-                                <div class="con-box" data-scroll="fade-up">
-                                    <dl>
-                                        <dt>Request Information</dt>
-                                        <dd><a href="../support/online.html"><span>View more</span><i class="xi-angle-right-min"></i></a></dd>
-                                    </dl>
-                                    <dl>
-                                        <dt>FAQ</dt>
-                                        <dd><a href="../support/faq.html"><span>View more</span><i class="xi-angle-right-min"></i></a></dd>
-                                    </dl>
-                                </div>
-                            </div>
+                                </dd>
+                            </dl>
                         </article>
 
 
-                        <article class="prd-others-con" id="STORE">
-                            <div class="area">
-                                <div class="tit-box" data-scroll="fade-up">
-                                    <h4 class="tit">Others you <br class="m-br">might like</h4>
-                                    <p class="txt">제품 클릭시 <span>네이버 스토어</span>에서 <br>결제가능합니다.</p>
-                                </div>
-                                <div class="con-box">
-                                    <ul class="prd-others-list">
-                                    </ul>
-                                </div>
-                            </div>
-                        </article>
-                    </section>
+
+
+                        <!-- 
+		paging 스타일 클래스
+		no-margin(margin없는형태) / paging-style02(원형) / paging-style03(라인)
+	-->
+
+                        <div class="paging paging-style03">
+                            <a href='faqe349.html?search_item=&amp;search_order=&amp;startPage=0#recruit' onfocus=this.blur() class='paging-arrow paging-first' title='first'><i class='xi-angle-left-min'></i><i class='xi-angle-left-min'></i></a><a href='faqe349.html?search_item=&amp;search_order=&amp;startPage=0#recruit' onfocus=this.blur() class='paging-arrow paging-prev' title='prev'><i class='xi-angle-left-min'></i></a><a href='javascript:;' class='cur'>1</a> <a href='faqe349.html?search_item=&amp;search_order=&amp;startPage=0#recruit' onfocus=this.blur() class='paging-arrow paging-next' title='next'><i class='xi-angle-right-min'></i></a><a href='faqe349.html?search_item=&amp;search_order=&amp;startPage=0#recruit' onfocus=this.blur() class='paging-arrow paging-last' title='last'><i class='xi-angle-right-min'></i><i class='xi-angle-right-min'></i></a>
+                        </div>
+
+
+                    </article> <!-- // -->
+                    </article>
 
                 </section>
                 <!-- //content -->

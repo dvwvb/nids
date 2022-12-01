@@ -3,21 +3,10 @@
 
 <head>
     <?php include "../_inc/config.php"; ?>
-    <style>
-        #topMenu01,
-        #topMenuM02 {
-            display: none;
-        }
-    </style>
-
     <script>
-        //  1번째  대메뉴 인덱스
-        dep1 = 1
-        // dep1 = 01,
-        dep2 = 02;
-        // sub2_num 변수가 있을때 ( 3차메뉴 )
-        dep3 = 03;
-        //console.log(dep3);
+        dep1 = 3
+        dep2 = 03;
+        dep3 = "";
     </script>
 </head>
 
@@ -28,163 +17,214 @@
     </div>
     <!-- //accessibility -->
     <!-- code -->
-    <div id="wrap" class="sub-wrap black-ver  ">
+    <div id="wrap" class="sub-wrap   ">
+        <!-- header -->
         <?php include "../_inc/header.php"; ?>
+
         <!-- container -->
         <div id="container">
             <!-- visual -->
+            <!-- 서브비주얼 없을때 visual_type ="none" -->
+            <section id="visual" class="sub-visual-company">
+                <div class="visual-img-con">
+                    <div class="visual-img-inner" style="background:#eee url(../../images/layout/sub_visual_company.jpg) no-repeat 70% 0%"></div>
+                </div>
+                <div class="area visual-txt-con">
+                    <div class="table-cell-layout">
+                        <div class="visual-txt-container">
+                            <h2 class="visual-tit trans400">
+                                About us </h2>
+                            <p class="visual-sub-txt">With Aivom’s Plasma Technology, <br class="m-br">Eliminate</p>
+                            <div class="location">
+                                <ul>
+                                    <li><a href="../index.html" title="HOME"><i class="xi-home"></i></a></li>
+                                    <li>About us</li>
+                                    <li>뉴스</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
             <!-- //visual -->
             <!-- middleArea -->
             <div id="middleArea">
                 <!-- ****************** 서브메뉴 ********************** -->
+                <!--  모든 서브메뉴 : fixed될때 fixed-sub-menu, top-fixed-object 클래스 추가  -->
+                <!-- 서브메뉴1 -->
+                <aside id="topMenu01" class="">
+                    <div class="side-menu-inner">
+                        <div class="area">
+                            <ul class="snb sub-menu-company clearfix">
+                                <li><a href="intro.html"><span>회사개요</span></a></li>
+                                <li><a href="greeting.html"><span>CEO 인사말</span></a></li>
+                                <li><a href="news.html"><span>뉴스</span></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </aside>
+                <!-- // -->
+
+                <!-- 모바일 서브메뉴 2 -->
+                <aside id="topMenuM02" class="cm-top-menu clearfix">
+                    <div class="side-menu-inner clearfix">
+                        <!-- 2차메뉴 -->
+                        <div class="menu-location  location2 cm-drop-menu-box-JS" data-drop-event="click">
+                            <button class="cur-location cm-drop-open-btn-JS">
+                                <span>뉴스</span>
+                                <i class="xi-caret-down-circle-o arrow"></i>
+                            </button>
+                            <ul class="location-menu-con cm-drop-list-JS">
+                                <li><a href="intro.html"><span>회사개요</span></a></li>
+                                <li><a href="greeting.html"><span>CEO 인사말</span></a></li>
+                                <li><a href="news.html"><span>뉴스</span></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </aside>
+                <!-- // -->
 
                 <!-- 2차&3차 같이 있는 타입 -->
-                <?php include "../_inc/productTop.php"; ?>
 
 
                 <!-- content -->
-                <section id="content" class="wide ">
+                <section id="content" class="area ">
+                    <article class="cm-sub-tit-box" data-scroll="fade-up">
+                        <div class="area">
+                            <h2 class="tit">뉴스</h2>
+                            <p class="sub-tit">도시환경의 기술정보가 필요한 곳에 엔아이디에스가 있습니다.</p>
+                        </div>
+                    </article>
 
-                    <section class="sub-page product-page">
-                        <article class="prd-cm-top-con hepa-top-con" data-scroll="fade-up">
-                            <div class="area">
-                                <div class="tit-box">
-                                    <strong class="sub-tit">NIDS Antivirus HEPA Module</strong>
-                                    <h2 class="tit">향균헤파 필터</h2>
+                    <article class="sub-page news-page board-page">
+                        <div class="news-con01" data-scroll="fade-up">
+                            <!-- skin - gallery - G18-->
+                            <article class="bbs-view-con">
+                                <aside class="bbs-view-top">
+                                    <!-- 필요할 경우만 삽입 -->
+
+                                    <!-- <p class="reply-state"><span>답변대기</span></p><p class="reply-state reply-state-finish"><span>답변완료</span></p> -->
+                                    <!-- <span class="bbs-category">[카테고리 있을때 쓰세요]</span> -->
+                                    <!-- // -->
+                                    <h1 class="bbs-tit">Arirang TV broadcasts NIDS in 'SmartBiz Accelerators' program</h1>
+                                    <dl class="bbs-write-info">
+                                        <dt>작성자</dt>
+                                        <dd>관리자</dd>
+                                        <dt>등록일</dt>
+                                        <dd>2022-09-08</dd>
+                                        <dt>조회수</dt>
+                                        <dd>111</dd>
+                                    </dl>
+                                </aside>
+                                <div class="bbs-view-content editor">
+                                    <p style=""><span style="font-size: 13.3333px;">Arirang TV broadcasts NIDS in 'SmartBiz Accelerators'</span></p>
+                                    <p style=""><span style="font-size: 13.3333px;">programon January 31 2019. Source from Arirang TV</span><br></p>
                                 </div>
-                                <div class="img-box"><img src="../../images/content/prd_hepa_top_img.jpg" alt=""></div>
-                                <div class="txt-box">
-                                    <p class="txt">NIDS Antivirus HEPA Technology Is <br class="m-br">innovative and essential.</p>
-                                </div>
-                                <div class="sub-cm-btn-box">
-                                    <a href="../support/online.html" class="sub-cm-btn style01"><span>문의하기</span><i class="xi-border-color"></i></a>
-                                    <a href="#" class="sub-cm-btn style02"><span>관련카달로그</span><i class="xi-document"></i></a>
-                                </div>
-                            </div>
-                        </article>
-                        <article class="hepa-con01">
-                            <div class="hepa-con01-area" data-scroll="fade-up">
-                                <div class="hepa-con01-txt">
-                                    <div class="area">
-                                        <h5>우리집 공기청정기, <br><b class="font-color-point">알레르기 호흡기 질환을 유발</b>하는 사실 알고 계신가요?</h5>
-                                        <p>오염된 필터에는 박테리아 및 미생물이 서식할 수 있으며 <br class="pc-br">오염된 필터가 장착된 공기청정기, 에어컨을 지속적으로 사용할 경우 알레르기, 호흡기 질환을 유발합니다</p>
+
+                                <!-- 
+		게시판 공유 기능
+		( ※ 필요한경우에만 넣으세요(sns공유) )
+		아이콘 안나올시 : <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">	
+	-->
+                                <!-- <div class="bbs-view-share-con">
+		<ul>
+			<li style="background-color:#777;"><a href="" title="URL 복사"><i class="xi-link"></i></a></li>
+			<li style="background-color:#3b5998;"><a href="" title="페이스북으로 공유하기"><i class="xi-facebook"></i></a></li>
+			<li style="background-color:#11c1ff;"><a href="" title="트위터로 공유하기"><i class="xi-twitter"></i></a></li>
+			<li style="background-color:#fab900;"><a href="" title="카카오스토리로 공유하기"><i class="xi-kakaostory"></i></a></li>
+			<li style="background-color:#00c300;"><a href="" title="블로그로 공유하기"><i class="xi-blogger"></i></a></li>
+			<li style="background-color:#dc4e41;"><a href="" title="구글에 공유하기"><i class="xi-google-plus"></i></a></li>
+		</ul>
+	</div> -->
+
+
+
+                                <form method="post" action="#" name="form2">
+                                    <input type="hidden" name="code" value="news_nids">
+                                    <input type="hidden" name="bbs_view_del" value="1">
+                                    <input type="hidden" name="bbs_view_edit" value="1">
+                                    <input type="hidden" name="returnURL" value="news.html">
+                                </form>
+
+                                <div class="cm-btn-controls">
+                                    <div class="right-btn-controls">
+                                        <a href="news.html" class="btn-style01">
+                                            목록 </a>
                                     </div>
                                 </div>
-                            </div>
-                        </article>
-                        <article class="hepa-con02">
-                            <div class="area">
-                                <h4 class="plasma-con02-tit" data-scroll="fade-up">NIDS 향균헤파필터의 <br class="m-br">핵심 3가지</h4>
-                                <div class="cm-gray-list-box" data-scroll="fade-up">
-                                    <ul class="txt-list">
-                                        <li>
-                                            <p class="check-dot-txt">자체 기술로 제조한 항균 필터여재 원단 사용</p>
-                                        </li>
-                                        <li>
-                                            <p class="check-dot-txt"><span class="point">항균력 99.9%</span> 공인시험기관 시험 인증</p>
-                                        </li>
-                                        <li>
-                                            <p class="check-dot-txt">무기항균물질로서 <span class="point">무독성, 인체안전성</span> 확보</p>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </article>
-                        <article class="hepa-con03">
-                            <div class="area">
-                                <div class="hepa-con03-txt" data-scroll="fade-up">
-                                    <h5>항균필터여재 및 항균제</h5>
-                                    <p>2차 오염원인 박테리아 제거를 위하여 <br class="pc-br">
-                                        무기항균제를 원단자체에 적용하여 항균성 부여 <br class="pc-br">
-                                        ‘필터형 보존처리제품’에 항균처리 목적으로 승인된 <br class="pc-br">
-                                        ‘살생물 물질’을 항균제로 적용</p>
-                                </div>
-                                <div class="hepa-con03-img" data-scroll="fade-up">
+
+
+                                <!-- 이전/다음 게시글보기 -->
+
+
+
+
+                                <article class="bbs-view-prev-next-list">
                                     <ul>
                                         <li>
-                                            <div class="img"><img src="../../images/content/prd_hepa_con03_img_01.png" alt=""></div>
-                                            <div class="txt">
-                                                <h5>SEM image</h5>
-                                                <p>x2000</p>
-                                            </div>
+                                            <table class="bbs-prev-next-tbl">
+                                                <colgroup>
+                                                    <col style="width:140px">
+                                                    <col style="">
+                                                </colgroup>
+                                                <tbody>
+                                                    <tr>
+                                                        <th><strong class="bbs-prev-next-tit">PREV<i class="xi-angle-up-min"></i></strong></th>
+                                                        <td>
+                                                            <p class="bbs-tit">이전 글이 없습니다.</p>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
                                         </li>
                                         <li>
-                                            <div class="img"><img src="../../images/content/prd_hepa_con03_img_02.png" alt=""></div>
-                                            <div class="txt">
-                                                <h5>SEM image</h5>
-                                                <p>x4000</p>
-                                            </div>
+                                            <table class="bbs-prev-next-tbl">
+                                                <colgroup>
+                                                    <col style="width:140px">
+                                                    <col style="">
+                                                </colgroup>
+                                                <tbody>
+                                                    <tr>
+                                                        <th><strong class="bbs-prev-next-tit">NEXT<i class="xi-angle-down-min"></i></strong></th>
+                                                        <td>
+                                                            <a href="newsd6b4.html?code=news_nids&amp;idx=12&amp;bgu=view">
+                                                                <p class="bbs-tit">Arirang TV broadcasts NIDS in 'SmartBiz Accelerators' program</p>
+                                                            </a>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
                                         </li>
                                     </ul>
-                                </div>
-                            </div>
-                        </article>
-                        <article class="hepa-con04">
-                            <div class="area">
-                                <h5 class="hepa-con04-tit" data-scroll="fade-up">원단의 항균력, 유해물질 검출에 대한 공인기관의 시험평가 완료</h5>
-                                <p class="hepa-con04-txt" data-scroll="fade-up">*시험법 KS K 0693 / 시험균주 : 황색포도상구균, 폐렴간균, 대장균, 녹농균</p>
-                                <div class="hepa-con04-wrapper">
-                                    <span class="hepa-con04-list-tit" data-scroll="fade-up">녹농균</span>
-                                    <ul class="hepa-con04-list" data-scroll="fade-up">
-                                        <li class="hepa-con04-item">
-                                            <div class="img"><img src="../../images/content/prd_hepa_con04_img_01.jpg" alt=""></div>
-                                            <div class="txt">
-                                                <h5>[그림] 항균성 시험사진 : 시험군 vs 대조군</h5>
-                                                <p>*균주 : Staphylococcus ATCC 6538</p>
-                                            </div>
-                                        </li>
-                                        <li class="hepa-con04-item">
-                                            <div class="img"><img src="../../images/content/prd_hepa_con04_img_02.jpg" alt=""></div>
-                                            <div class="txt">
-                                                <h5>[그림] 항균성 시험사진 : 시험군 vs 대조군</h5>
-                                                <p>*균주 : Escherichia coli ATCC 25922</p>
-                                            </div>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </article>
-                        <article class="plasma-con03">
-                            <div class="prd-cm-video-con" data-scroll="fade-up">
-                                <div class="area">
-                                    <div class="video-box">
-                                        <iframe width="560" height="315" src="https://www.youtube.com/embed/bdsxRgm8_Ts" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                                    </div>
-                                    <div class="sub-cm-btn-box">
-                                        <a href="../technology/hepa.html" class="sub-cm-btn style01"><span>향균헤파 기술 자세히 보기</span><i class="xi-search"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </article>
-                        <article class="prd-cm-link-con">
-                            <div class="area-box">
-                                <div class="con-box" data-scroll="fade-up">
-                                    <dl>
-                                        <dt>Request Information</dt>
-                                        <dd><a href="../support/online.html"><span>View more</span><i class="xi-angle-right-min"></i></a></dd>
-                                    </dl>
-                                    <dl>
-                                        <dt>FAQ</dt>
-                                        <dd><a href="../support/faq.html"><span>View more</span><i class="xi-angle-right-min"></i></a></dd>
-                                    </dl>
-                                </div>
-                            </div>
-                        </article>
+                                </article>
+                                <!-- // -->
 
 
-                        <article class="prd-others-con" id="STORE">
-                            <div class="area">
-                                <div class="tit-box" data-scroll="fade-up">
-                                    <h4 class="tit">Others you <br class="m-br">might like</h4>
-                                    <p class="txt">제품 클릭시 <span>네이버 스토어</span>에서 <br>결제가능합니다.</p>
-                                </div>
-                                <div class="con-box">
-                                    <ul class="prd-others-list">
-                                    </ul>
-                                </div>
-                            </div>
-                        </article>
-                    </section>
+
+
+                                <script type="text/javascript">
+                                    <!--
+                                    function dele() {
+                                        ans = confirm("게시글을 삭제하시겠습니까?");
+                                        if (ans == true) {
+                                            form2.action = "https://www.nids.co.kr/bbs/bbs_view_del.php?returnURL=&amp;idx=11";
+                                            form2.submit();
+                                        }
+
+                                    }
+
+                                    function modi() {
+                                        form2.action = "newsdb83.html?returnURL=&amp;bgu=edit&amp;idx=11";
+                                        form2.submit();
+                                    }
+                                    //
+                                    -->
+                                </script>
+
+
+                            </article> <!-- // -->
+                        </div>
+                    </article>
 
                 </section>
                 <!-- //content -->
