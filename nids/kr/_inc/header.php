@@ -1,4 +1,3 @@
- <!-- header -->
  <header id="header" class="top-fixed-object">
      <!-- .top-fixed가 붙는 object에 top-fixed-object 클래스 추가  -->
      <div class="gnb-overlay-bg"></div>
