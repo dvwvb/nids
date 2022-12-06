@@ -34,7 +34,7 @@
 <link rel="shortcut icon" href="https://www.nids.co.kr/nids/favicon.ico">
 <link rel="canonical" href="https://www.nids.co.kr/">
 <link rel="stylesheet" href="/css/default.css">
-<link rel="stylesheet" href="/nids/css/layout07c8.css?ver=220914">
+<link rel="stylesheet" href="/nids/css/layout.css?ver=220914">
 <link rel="stylesheet" href="/nids/css/content.css?ver=22114">
 <link rel="stylesheet" href="/nids/css/content_mj.css?ver=220914">
 <link rel="stylesheet" href="/nids/css/main.css?ver=220921" />

@@ -27,65 +27,8 @@
             <!-- //visual -->
             <!-- middleArea -->
             <div id="middleArea">
-                <!-- ****************** 서브메뉴 ********************** -->
 
-                <!-- 2차&3차 같이 있는 타입 -->
-
-                <section id="productTop">
-                    <div class="area">
-                        <!-- 제품&기술페이지용 서브메뉴 -->
-                        <aside id="topMenu04" class="">
-                            <div class="side-menu-inner">
-                                <div class="cm-top-menu clearfix">
-                                    <div class="menu-location location2 cm-drop-menu-box-JS" data-drop-event="click">
-                                        <button class="cur-location cm-drop-open-btn-JS">
-                                            <span>공기살균&탈취 기술</span>
-                                            <i class="xi-caret-down-circle-o arrow"></i>
-                                        </button>
-                                        <ul class="location-menu-con cm-drop-list-JS">
-                                            <li>
-                                                <a href="sensor_dust.html"><span>센서기술</span></a>
-                                                <ul class="gnb-3dep">
-                                                    <li><a href="sensor_dust.html"><span>먼지센싱기술</span></a></li>
-                                                    <li><a href="sensor_gas.html"><span>가스센싱기술</span></a></li>
-                                                </ul>
-                                            </li>
-                                            <li>
-                                                <a href="plasma.html"><span>공기살균 & 탈취 기술</span></a>
-                                                <ul class="gnb-3dep">
-                                                    <li><a href="plasma.html"><span>플라즈마 기술</span></a></li>
-                                                    <li><a href="photocatalytic.html"><span>광촉매 기술</span></a></li>
-                                                    <li><a href="hepa.html"><span>향균헤파필터</span></a></li>
-                                                </ul>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </aside>
-                        <aside id="topMenu02" class="">
-                            <div class="side-menu-inner">
-                                <div class="prd-gnb-wrapper">
-                                    <ul class="swiper-wrapper sub-menu-technology clearfix">
-                                        <li class="swiper-slide gnb-name"><a href="plasma.html"><span>플라즈마 기술</span></a></li>
-                                        <li class="swiper-slide gnb-name"><a href="photocatalytic.html"><span>광촉매 기술</span></a></li>
-                                        <li class="swiper-slide gnb-name"><a href="hepa.html"><span>향균헤파</span></a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </aside>
-                        <!-- // -->
-                        <div class="location">
-                            <ul>
-                                <li><a href="../index.html" title="HOME"><i class="xi-home"></i></a></li>
-                                <li>
-                                    <!-- 공기살균&탈취 기술 -->technology
-                                </li>
-                                <li>향균헤파</li>
-                            </ul>
-                        </div>
-                    </div>
-                </section>
+                <?php include "../_inc/productTop.php"; ?>
 
                 <!-- content -->
                 <section id="content" class="wide ">

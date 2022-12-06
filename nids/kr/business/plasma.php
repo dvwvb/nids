@@ -36,11 +36,8 @@
             <!-- //visual -->
             <!-- middleArea -->
             <div id="middleArea">
-                <!-- ****************** 서브메뉴 ********************** -->
 
-                <!-- 2차&3차 같이 있는 타입 -->
                 <?php include "../_inc/productTop.php"; ?>
-
 
                 <!-- content -->
                 <section id="content" class="wide ">
