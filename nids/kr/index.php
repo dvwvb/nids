@@ -25,14 +25,8 @@
                 <section id="mainVisual" class="full-height">
                     <article class="main-visual-con">
                         <div class="main-visual-item">
-                            <div class="main-visual-img main-visual-pc-img" style="
-                    background: #fff url(../images/main/main_visual_01.jpg)
-                      no-repeat 50% 50%;
-                  "></div>
-                            <div class="main-visual-img main-visual-m-img" style="
-                    background: #fff url(../images/main/main_visual_01_m.html)
-                      no-repeat 50% 50%;
-                  "></div>
+                            <div class="main-visual-img main-visual-pc-img" style="background: #fff url(../images/main/main_visual_01.jpg) no-repeat 50% 50%"></div>
+                            <div class="main-visual-img main-visual-m-img" style="background: #fff url(../images/main/main_visual_01_m.html) no-repeat 50% 50%"></div>
                             <div class="main-visual-txt-con">
                                 <div class="main-visual-txt-box area-wide">
                                     <div class="main-visual-txt-inner">
@@ -47,14 +41,8 @@
                             </div>
                         </div>
                         <div class="main-visual-item">
-                            <div class="main-visual-img main-visual-pc-img" style="
-                    background: #fff url(../images/main/main_visual_02.jpg)
-                      no-repeat 50% 50%;
-                  "></div>
-                            <div class="main-visual-img main-visual-m-img" style="
-                    background: #fff url(../images/main/main_visual_02_m.html)
-                      no-repeat 50% 50%;
-                  "></div>
+                            <div class="main-visual-img main-visual-pc-img" style="background: #fff url(../images/main/main_visual_02.jpg) no-repeat 50% 50%"></div>
+                            <div class="main-visual-img main-visual-m-img" style="background: #fff url(../images/main/main_visual_02_m.html) no-repeat 50% 50%"></div>
                             <div class="main-visual-txt-con">
                                 <div class="main-visual-txt-box area-wide">
                                     <div class="main-visual-txt-inner">
@@ -69,14 +57,8 @@
                             </div>
                         </div>
                         <div class="main-visual-item">
-                            <div class="main-visual-img main-visual-pc-img" style="
-                    background: #fff url(../images/main/main_visual_03.jpg)
-                      no-repeat 50% 50%;
-                  "></div>
-                            <div class="main-visual-img main-visual-m-img" style="
-                    background: #fff url(../images/main/main_visual_03_m.html)
-                      no-repeat 50% 50%;
-                  "></div>
+                            <div class="main-visual-img main-visual-pc-img" style="background: #fff url(../images/main/main_visual_03.jpg) no-repeat 50% 50%"></div>
+                            <div class="main-visual-img main-visual-m-img" style="background: #fff url(../images/main/main_visual_03_m.html) no-repeat 50% 50%"></div>
                             <div class="main-visual-txt-con">
                                 <div class="main-visual-txt-box area-wide">
                                     <div class="main-visual-txt-inner">
@@ -106,10 +88,7 @@
                                     <div class="main-tech-top">
                                         <div class="main-tech-top-item white-bg-cover">
                                             <a href="#" class="inner">
-                                                <div class="main-tech-bg" style="
-                              background: url('../images/main/main_tech01_bg01.jpg')
-                                center/cover no-repeat;
-                            "></div>
+                                                <div class="main-tech-bg" style="background: url('../images/main/main_tech01_bg01.jpg') center/cover no-repeat"></div>
                                                 <div class="main-tech-txt">
                                                     <h5 class="tit">Factory</h5>
                                                     <p class="category">Application</p>
@@ -122,10 +101,7 @@
                                         </div>
                                         <div class="main-tech-top-item red-cover white-bg-cover">
                                             <a href="#" class="inner">
-                                                <div class="main-tech-bg" style="
-                              background: url('../images/main/main_tech01_bg02.jpg')
-                                center/cover no-repeat;
-                            "></div>
+                                                <div class="main-tech-bg" style="background: url('../images/main/main_tech01_bg02.jpg') center/cover no-repeat"></div>
                                                 <div class="main-tech-txt">
                                                     <h5 class="tit">HVAC, Duct</h5>
                                                     <p class="category">Application</p>
@@ -136,10 +112,7 @@
                                     </div>
                                     <div class="main-tech-bottom white-bg-cover">
                                         <a href="#" class="inner">
-                                            <div class="main-tech-bg" style="
-                            background: url('../images/main/main_tech01_bg03.jpg')
-                              center/cover no-repeat;
-                          "></div>
+                                            <div class="main-tech-bg" style="background: url('../images/main/main_tech01_bg03.jpg') center/cover no-repeat"></div>
                                             <div class="main-tech-txt prd-block">
                                                 <h5 class="tit">Air purifier</h5>
                                                 <p class="category">Application</p>
@@ -158,10 +131,7 @@
                                     <div class="main-tech-top">
                                         <div class="main-tech-top-item red-cover white-bg-cover">
                                             <a href="#" class="inner">
-                                                <div class="main-tech-bg" style="
-                              background: url('../images/main/main_tech02_bg01.jpg')
-                                center/cover no-repeat;
-                            "></div>
+                                                <div class="main-tech-bg" style="background: url('../images/main/main_tech02_bg01.jpg') center/cover no-repeat"></div>
                                                 <div class="main-tech-txt">
                                                     <h5 class="tit">Vehicle</h5>
                                                     <p class="category">Application</p>
@@ -174,10 +144,7 @@
                                         </div>
                                         <div class="main-tech-top-item white-bg-cover">
                                             <a href="#" class="inner">
-                                                <div class="main-tech-bg" style="
-                              background: url('../images/main/main_tech02_bg02.jpg')
-                                center/cover no-repeat;
-                            "></div>
+                                                <div class="main-tech-bg" style="background: url('../images/main/main_tech02_bg02.jpg') center/cover no-repeat"></div>
                                                 <div class="main-tech-txt">
                                                     <h5 class="tit">악취모니터링</h5>
                                                     <p class="category">Application</p>
@@ -188,10 +155,7 @@
                                     </div>
                                     <div class="main-tech-bottom white-bg-cover">
                                         <a href="#" class="inner">
-                                            <div class="main-tech-bg" style="
-                            background: url('../images/main/main_tech02_bg03.jpg')
-                              center/cover no-repeat;
-                          "></div>
+                                            <div class="main-tech-bg" style="background: url('../images/main/main_tech02_bg03.jpg') center/cover no-repeat"></div>
                                             <div class="main-tech-txt">
                                                 <h5 class="tit">IoT System</h5>
                                                 <p class="category">Application</p>
@@ -208,10 +172,7 @@
                         </div>
                         <div class="main-tech-right">
                             <div class="main-tech-right-item white-bg-cover">
-                                <div class="main-tech-bg" style="
-                      background: url('../images/main/main_tech01_bg04.jpg')
-                        center/cover no-repeat;
-                    "></div>
+                                <div class="main-tech-bg" style="background: url('../images/main/main_tech01_bg04.jpg') center/cover no-repeat"></div>
                                 <div class="main-tech-txt-wide">
                                     <h5 class="tit">
                                         NIDS 환경센서 <br class="pc-br" />& IoT 시스템 적용
@@ -249,11 +210,7 @@
                                             <div class="main-product-img cm-img-ani delay3">
                                                 <!-- 제품 이미지 권장사이즈 500x400 -->
                                                 <div class="img">
-                                                    <span style="
-                                background: #fff
-                                  url('../images/main/main_prd_img01.jpg')
-                                  center/cover no-repeat;
-                              "></span>
+                                                    <span style="background: #fff url('../images/main/main_prd_img01.jpg') center/cover no-repeat;"></span>
                                                 </div>
                                             </div>
                                             <div class="main-product-txt">
@@ -267,11 +224,7 @@
                                         <a href="business/sensor_gas.html">
                                             <div class="main-product-img cm-img-ani delay5">
                                                 <div class="img">
-                                                    <span style="
-                                background: #fff
-                                  url('../images/main/main_prd_img02.jpg')
-                                  center/cover no-repeat;
-                              "></span>
+                                                    <span style="background: #fff url('../images/main/main_prd_img02.jpg') center/cover no-repeat;"></span>
                                                 </div>
                                             </div>
                                             <div class="main-product-txt">
@@ -287,11 +240,7 @@
                                         <a href="business/iot.html">
                                             <div class="main-product-img cm-img-ani delay8">
                                                 <div class="img">
-                                                    <span style="
-                                background: #fff
-                                  url('../images/main/main_prd_img03.jpg')
-                                  center/cover no-repeat;
-                              "></span>
+                                                    <span style="background: #fff url('../images/main/main_prd_img03.jpg') center/cover no-repeat;"></span>
                                                 </div>
                                             </div>
                                             <div class="main-product-txt">

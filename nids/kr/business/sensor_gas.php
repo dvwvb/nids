@@ -4,13 +4,9 @@
 <head>
     <?php include "../_inc/config.php"; ?>
     <script>
-        //  1번째  대메뉴 인덱스
         dep1 = 1
-        // dep1 = 01,
         dep2 = 01;
-        // sub2_num 변수가 있을때 ( 3차메뉴 )
         dep3 = 02;
-        //console.log(dep3);
     </script>
 </head>
 
